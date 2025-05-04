@@ -3,50 +3,48 @@ body {
   background: #f8f9fa;
   color: #222;
 }
-.naver-header {
-  background: #fff;
-  border-bottom: 1.5px solid #e4e4e4;
-  padding: 18px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .logo { font-size:28px; font-weight: bold; margin-right: 40px; }
-
-.naver-searchbar input:focus {
-  outline: none;
-  box-shadow: none;
+.naver-tabs ul { 
+  display: flex; 
+  gap: 8px;
+  padding: 5px;
 }
-.naver-searchbar input[readonly] {
-  background: transparent;
-  pointer-events: none;
-}
-.naver-searchbar button:active,
-.naver-searchbar button:focus {
-  background: #03C75A !important;
-  color: #fff !important;
-  box-shadow: none !important;
-}
-
-.naver-tabs {
-  display: flex; justify-content: center; background: #f5f8fa; border-bottom:1px solid #e4e4e4;
-}
-.naver-tabs ul { display: flex; gap: 8px;}
 .naver-tabs li {
   list-style: none;
-  padding: 12px 22px;
   cursor: pointer;
   font-weight: 500;
-  border-bottom: 3px solid transparent;
 }
-.naver-tabs .active {
-  color: #03C75A;
-  font-weight: bold;
+.naver-header {border-bottom: 1.5px }
+.naver-header .logo { font-size: 2rem; font-weight: bold; letter-spacing: 1px; }
+.naver-searchbar input { border: none; }
+.naver-searchbar button { background: #03C75A; border: none; }
+.naver-tabs .nav-link.active { 
+  border-radius: 20px; 
+  background: #03C75A; 
 }
-.nav-link {
-  color: #000;
+.naver-tabs .nav-link { 
+  border-radius: 20px; 
+  background: #f7f7f9; 
+  color:#222225; 
+}
+.content-section:not(.visible) { display: none; }
+.blog-preview { cursor:pointer;}
+.blog-detail { display:none; }
+#about {
+  background-color: #f7f7f9;
+  padding: 30px;
+  display: flex; /* 부모 요소를 Flexbox로 설정 */
+  justify-content: center; /* 내부 요소 가운데 정렬 */
+  
 }
 
-.content-section { display:none; padding: 44px 0; max-width: 700px; margin:0 auto;}
+.content-section { 
+  padding: 44px; 
+  max-width: 700px; 
+  margin: auto;
+  display: flex;
+  flex-direction: column; /* 내부 요소를 세로로 정렬 */
+  align-items: center; /* 내부 요소 가운데 정렬 */
+}
 .content-section.visible { display: block; }
 .blog-detail { display:none; }

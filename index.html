@@ -8,17 +8,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   <!-- 네이버 초록/화이트 감성 기본 스타일 유지 (기존 CSS가 있다면 아래 것 보다 위에 link로 유지하세요) -->
   <link rel="stylesheet" href="style.css">
-  <style>
-    body { background: #fff; }
-    .naver-header { background: #fff; border-bottom: 1.5px solid #e2e5e6; }
-    .naver-header .logo { font-size: 2rem; font-weight: bold; letter-spacing: 1px; }
-    .naver-searchbar input { border: none; background: #f6f8fa; }
-    .naver-searchbar button { background: #03C75A; color: #fff; border: none; }
-    .naver-tabs .nav-link.active { background: #03C75A !important; color:#fff !important; }
-    .content-section:not(.visible) { display: none; }
-    .blog-preview { cursor:pointer;}
-    .blog-detail { display:none; }
-  </style>
 </head>
 <body>
   <header class="naver-header py-3" style="background:#fff; border-bottom:1.5px solid #e2e5e6;">
@@ -55,25 +44,25 @@
     </div>
   </header>
   <!-- 네비 탭 -->
-  <nav class="naver-tabs bg-white px-2 pt-2 border-bottom">
+  <nav class="naver-tabs bg-white border-bottom">
     <ul class="nav nav-pills justify-content-center" id="mainTabs">
       <li class="nav-item">
-        <a class="nav-link active" data-bs-toggle="pill" href="#about">👨‍💻 자기소개</a>
+        <a class="nav-link active" data-bs-toggle="pill" href="#about" data-menu="about">👨‍💻 자기소개</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="pill" href="#tech">🛠️ 기술 스택</a>
+        <a class="nav-link" data-bs-toggle="pill" href="#tech" data-menu="tech">🛠️ 기술 스택</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="pill" href="#project">📚 프로젝트</a>
+        <a class="nav-link" data-bs-toggle="pill" href="#project" data-menu="project">📚 프로젝트</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="pill" href="#edu">🏤 학력</a>
+        <a class="nav-link" data-bs-toggle="pill" href="#edu" data-menu="edu">🏤 학력</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="pill" href="#award">🏆 수상 내역</a>
+        <a class="nav-link" data-bs-toggle="pill" href="#award" data-menu="award">🏆 수상 내역</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="pill" href="#contact">📩 연락처</a>
+        <a class="nav-link" data-bs-toggle="pill" href="#contact" data-menu="contact">📩 연락처</a>
       </li>
     </ul>
   </nav>
@@ -83,18 +72,18 @@
     <div class="tab-content">
 
       <!-- 자기소개 -->
-      <section id="about" class="tab-pane fade show active content-section visible">
+      <section id="about" class="border border-secondary-subtle rounded-4 tab-pane fade show active content-section visible">
         <div class="row align-items-center">
           <!-- 왼쪽 정보(이름, 테이블, 소개) -->
-          <div class="col-md-8">
+          <div class="col-md-11 mx-auto">
             <h2 class="fw-bold mb-0"><span class="area_text_title"><strong>송예빈</strong></span></h2>
-            <div class="mb-3">
+            <div class="mb-3 ">
               <span>Ye Bin Song</span>
-              <span class="ms-2 text-muted">개발자</span>
+              <span class="ms-2 text-muted ">개발자</span>
             </div>
             <!-- 출생/학력/이메일/깃허브 + 바로 오른쪽에 이미지 -->
-            <div class="d-flex align-items-center mb-3">
-              <table class="table table-borderless align-middle mb-0" style="width:auto; margin-bottom:0;">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <table class="table-borderless align-middle mb-0" style="width:auto; margin-bottom:0;">
                 <tbody>
                   <tr>
                     <th style="width:70px" class="text-nowrap">출생</th>
@@ -114,14 +103,13 @@
                   </tr>
                 </tbody>
               </table>
-              <!-- 이미지: 바로 오른쪽에 붙게 margin-left 주고 세로 정렬 -->
-              <img class="rounded-circle shadow ms-4" src="image/image.png" height="120" alt="송예빈" />
-            </div>
+              <img class="rounded-4 shadow" src="image/image.png" height="120" alt="송예빈" />
+            </div>            
             <!-- 자기소개 내용 -->
             <h5>소개</h5>
-            <div class="p-3 bg-light rounded">
+            <div class="p-1">
               안녕하세요, <b>소통과 협업</b>을 중요시하는 개발자 <span style="color:#03C75A;">송예빈</span>입니다.<br>
-              새로운 기술과 도구에 열정을 갖고, 문제 해결과 창의적인 아이디어로<br>
+              새로운 기술과 도구에 열정을 갖고, 문제 해결과 창의적인 아이디어로
               현실적인 솔루션 제공을 목표로 합니다.<br>
               <b>유연성과 책임감</b>으로 <b>최상의 결과물</b>을 위해 노력합니다.<br>
               함께 성장하고 성공하는 IT 동료가 되겠습니다.<br>
@@ -132,7 +120,7 @@
       </section>
 
       <!-- 기술스택 -->
-      <section id="tech" class="tab-pane fade content-section">
+      <section id="tech" class="border border-secondary-subtle rounded-4 tab-pane fade show active content-section ">
         <h2 class="mb-3">🛠️ 기술 스택</h2>
 
         <div class="row">
@@ -387,25 +375,6 @@
 
   <!-- Bootstrap JS, Popper.js and main.js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // 상세 펼침/접기 + 탭 연동 (showBlogDetail 함수)
-    function showBlogDetail(key) {
-      // 모든 상세글을 숨김
-      document.querySelectorAll('.blog-detail').forEach(el => el.style.display='none');
-      // 해당 상세글만 표시
-      const detail = document.getElementById('blog-detail-' + key);
-      if (detail) detail.style.display = 'block';
-      // 프로젝트 탭 이동 (모바일에서 사용시) 
-      var projectTab = document.querySelector('[href="#project"]');
-      if (projectTab) projectTab.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-    // 탭 이동시 상세 닫힘
-    document.querySelectorAll('.nav-link').forEach(el=>{
-      el.addEventListener('show.bs.tab', function() {
-        document.querySelectorAll('.blog-detail').forEach(el => el.style.display='none');
-      });
-    });
-  </script>
   <script src="main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
