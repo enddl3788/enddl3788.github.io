@@ -4,78 +4,122 @@
   <meta charset="UTF-8">
   <title>송예빈 포트폴리오</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- 네이버 느낌의 초록/화이트 배색, 심플함 → CSS에서 처리 -->
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <!-- 네이버 초록/화이트 감성 기본 스타일 유지 (기존 CSS가 있다면 아래 것 보다 위에 link로 유지하세요) -->
   <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: #fff; }
+    .naver-header { background: #fff; border-bottom: 1.5px solid #e2e5e6; }
+    .naver-header .logo { font-size: 2rem; font-weight: bold; letter-spacing: 1px; }
+    .naver-searchbar input { border: none; background: #f6f8fa; }
+    .naver-searchbar button { background: #03C75A; color: #fff; border: none; }
+    .naver-tabs .nav-link.active { background: #03C75A !important; color:#fff !important; }
+    .content-section:not(.visible) { display: none; }
+    .blog-preview { cursor:pointer;}
+    .blog-detail { display:none; }
+  </style>
 </head>
 <body>
-  <header class="naver-header">
-    <div class="logo"><span style="color:#03C75A">DEVELOPER</span></div>
-    <form class="naver-searchbar">
-      <input type="text" value="송예빈" readonly>
-      <button type="submit"><span>검색</span></button>
-    </form>
-  </header>
+  <header class="naver-header py-3" style="background:#fff; border-bottom:1.5px solid #e2e5e6;">
+    <div class="container">
+      <div class="d-flex align-items-center">
+        <!-- 로고 -->
+        <div class="logo fw-bold" style="font-size:2rem; letter-spacing:1px; color:#03C75A; min-width:140px;">
+          DEVELOPER
+        </div>
+        <!-- 검색창 -->
+        <form class="flex-grow-1 ms-3">
+          <div 
+            class="d-flex align-items-center rounded-pill shadow-sm bg-white px-2"
+            style="height:48px; border:1.5px solid #e5e5e5; position:relative; max-width:550px; width:100%;">
+          
+            <!-- 인풋 (아이콘 공간 만큼 padding-left) -->
+            <input 
+              type="text" 
+              class="form-control border-0 bg-transparent shadow-none flex-grow-1"
+              value="송예빈" 
+              readonly 
+              style="font-size:1.08rem; color:#222; font-weight:500; background:transparent; padding:20px; height:44px; min-width:90px;">
 
-  <nav class="naver-tabs">
-    <ul>
-      <li class="active" data-menu="about">👨‍💻 자기소개</li>
-      <li data-menu="tech">🛠️ 기술 스택</li>
-      <li data-menu="project">📚 프로젝트</li>
-      <li data-menu="edu">🏤 학력</li>
-      <li data-menu="award">🏆 수상 내역</li>
-      <li data-menu="contact">📩 연락처</li>
+            <!-- 돋보기 아이콘 -->
+            <span style="position:absolute; right:18px; color:#03C75A; z-index:2;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                <line x1="16.4142" y1="16.586" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
+  <!-- 네비 탭 -->
+  <nav class="naver-tabs bg-white px-2 pt-2 border-bottom">
+    <ul class="nav nav-pills justify-content-center" id="mainTabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-bs-toggle="pill" href="#about">👨‍💻 자기소개</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="pill" href="#tech">🛠️ 기술 스택</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="pill" href="#project">📚 프로젝트</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="pill" href="#edu">🏤 학력</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="pill" href="#award">🏆 수상 내역</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="pill" href="#contact">📩 연락처</a>
+      </li>
     </ul>
   </nav>
 
-  <main>
-    <!-- 상단: 이름, 소개 -->
-    <section id="about" class="content-section visible">
-      <div class="cm_top_wrap _sticky _custom_select _header">
-        <div class="title_area type_keep _title_area"> 
-          <h2 class="title _title_ellipsis" style="max-height: 48px;" data-kgs-ellipsis="" ellipsis-applied="true"> 
-            <span class="area_text_title">
-              <strong class="_text" style="">송예빈</strong>
-            </span>
-          </h2> 
-          <div class="sub_title first_elss"> 
-            <span class="txt">Ye Bin Song</span> 
-            <span class="cm_bar"></span> 
-            <span class="txt">개발자</span> 
-          </div> 
-        </div>
-      </div>
+  <!-- Main 영역 -->
+  <main class="container my-4">
+    <div class="tab-content">
 
-      <div class="cm_content_wrap">
-        <div class="cm_content_area _cm_content_area_profile">
-          <div class="cm_info_box type_anniversary">
-            <div class="detail_info _detail_info_wrap" style="display:flex; align-items: flex-start;">
-              <!-- 프로필 정보 -->
-              <dl class="info txt_3" >
-                <div class="info_group" style="display:flex;">
-                  <div class="info_group_1">
-                    <dt><span class="cm_bar"></span>출생</dt>
-                    <dt><span class="cm_bar"></span>학력</dt>
-                    <dt><span class="cm_bar"></span>이메일</dt>
-                    <dt><span class="cm_bar"></span>깃허브</dt>
-                  </div>
-                  <div class="info_group_2">
-                    <dd>2001.04.09</dd>
-                    <dd>성결대학교 컴퓨터공학과 졸업</dd>
-                    <dd>enddl3788@naver.com</a></dd>
-                    <dd>
-                      <a href="https://github.com/enddl3788" target="_blank">github.com/enddl3788</a>
-                    </dd>
-                  </div>
-                </div>
-              </dl>
-              <!-- 프로필 사진(원하는 이미지로 교체) -->
-              <a href="#" class="thumb _item" data-id="main_profile" style="margin-left:120px;">
-                <img class="_img" src="image\image.png" height="120" alt="송예빈">
-              </a>
+      <!-- 자기소개 -->
+      <section id="about" class="tab-pane fade show active content-section visible">
+        <div class="row align-items-center">
+          <!-- 왼쪽 정보(이름, 테이블, 소개) -->
+          <div class="col-md-8">
+            <h2 class="fw-bold mb-0"><span class="area_text_title"><strong>송예빈</strong></span></h2>
+            <div class="mb-3">
+              <span>Ye Bin Song</span>
+              <span class="ms-2 text-muted">개발자</span>
             </div>
-            <!-- 자기소개 영역 -->
-            <h3>소개</h3>
-            <div style="font-size:1.05em; color:#222; line-height:1.8; background:#f8fafb; border-radius:8px;">
+            <!-- 출생/학력/이메일/깃허브 + 바로 오른쪽에 이미지 -->
+            <div class="d-flex align-items-center mb-3">
+              <table class="table table-borderless align-middle mb-0" style="width:auto; margin-bottom:0;">
+                <tbody>
+                  <tr>
+                    <th style="width:70px" class="text-nowrap">출생</th>
+                    <td>2001.04.09</td>
+                  </tr>
+                  <tr>
+                    <th>학력</th>
+                    <td>성결대학교 컴퓨터공학과 졸업</td>
+                  </tr>
+                  <tr>
+                    <th>이메일</th>
+                    <td>enddl3788@naver.com</td>
+                  </tr>
+                  <tr>
+                    <th>깃허브</th>
+                    <td><a href="https://github.com/enddl3788" target="_blank">github.com/enddl3788</a></td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- 이미지: 바로 오른쪽에 붙게 margin-left 주고 세로 정렬 -->
+              <img class="rounded-circle shadow ms-4" src="image/image.png" height="120" alt="송예빈" />
+            </div>
+            <!-- 자기소개 내용 -->
+            <h5>소개</h5>
+            <div class="p-3 bg-light rounded">
               안녕하세요, <b>소통과 협업</b>을 중요시하는 개발자 <span style="color:#03C75A;">송예빈</span>입니다.<br>
               새로운 기술과 도구에 열정을 갖고, 문제 해결과 창의적인 아이디어로<br>
               현실적인 솔루션 제공을 목표로 합니다.<br>
@@ -85,146 +129,141 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- 🛠️ 기술스택 (탭 클릭시 노출) -->
-    <section id="tech" class="content-section visible">
-      <h2>🛠️ 기술 스택</h2>
+      <!-- 기술스택 -->
+      <section id="tech" class="tab-pane fade content-section">
+        <h2 class="mb-3">🛠️ 기술 스택</h2>
 
-      <h3>💻 프로그래밍 언어</h3>
-      <ul>
-        <li>C#</li>
-        <li>Java</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-      </ul>
-      <h3>⚙️ 프레임워크 & 라이브러리</h3>
-      <ul>
-        <li>Unity 3D</li>
-        <li>Android SDK</li>
-        <li>Firebase</li>
-        <li>TensorFlow (딥러닝 모델 학습)</li>
-      </ul>
-      <h3>🔌 API</h3>
-      <ul>
-        <li>Kakao REST API (로그인, 회원가입)</li>
-        <li>Kakao Maps API (위치 기반 서비스)</li>
-      </ul>
-      <h3>🗃️ 데이터베이스</h3>
-      <ul>
-        <li>Firebase Realtime Database</li>
-        <li>SQLite</li>
-      </ul>
-      <h3>🛠️ 도구 및 플랫폼</h3>
-      <ul>
-        <li>Android Studio</li>
-        <li>Visual Studio Code</li>
-        <li>Git (버전 관리)</li>
-        <li>Unity Editor</li>
-        <li>Google Colab (딥러닝 모델 학습 및 테스트)</li>
-      </ul>
-      <h3>⚡ 기술 및 서비스</h3>
-      <ul>
-        <li>WebGL (웹 게임 배포)</li>
-        <li>RESTful API (서버 통신)</li>
-        <li>AI (딥러닝 모델, 이미지 모자이크 처리)</li>
-        <li>🌍 다국어 지원 (게임/앱 내 다국어)</li>
-      </ul>
-    </section>
+        <div class="row">
+          <div class="col-md-6">
+            <h5>💻 프로그래밍 언어</h5>
+            <ul class="list-group mb-3">
+              <li class="list-group-item">C#</li>
+              <li class="list-group-item">Java</li>
+              <li class="list-group-item">JavaScript</li>
+              <li class="list-group-item">Python</li>
+            </ul>
+            <h5>⚙️ 프레임워크 & 라이브러리</h5>
+            <ul class="list-group mb-3">
+              <li class="list-group-item">Unity 3D</li>
+              <li class="list-group-item">Android SDK</li>
+              <li class="list-group-item">Firebase</li>
+              <li class="list-group-item">TensorFlow (딥러닝 모델 학습)</li>
+            </ul>
+            <h5>🔌 API</h5>
+            <ul class="list-group mb-3">
+              <li class="list-group-item">Kakao REST API (로그인, 회원가입)</li>
+              <li class="list-group-item">Kakao Maps API (위치 기반 서비스)</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5>🗃️ 데이터베이스</h5>
+            <ul class="list-group mb-3">
+              <li class="list-group-item">Firebase Realtime Database</li>
+              <li class="list-group-item">SQLite</li>
+            </ul>
+            <h5>🛠️ 도구 및 플랫폼</h5>
+            <ul class="list-group mb-3">
+              <li class="list-group-item">Android Studio</li>
+              <li class="list-group-item">Visual Studio Code</li>
+              <li class="list-group-item">Git (버전 관리)</li>
+              <li class="list-group-item">Unity Editor</li>
+              <li class="list-group-item">Google Colab (딥러닝 모델 학습 및 테스트)</li>
+            </ul>
+            <h5>⚡ 기술 및 서비스</h5>
+            <ul class="list-group mb-3">
+              <li class="list-group-item">WebGL (웹 게임 배포)</li>
+              <li class="list-group-item">RESTful API (서버 통신)</li>
+              <li class="list-group-item">AI (딥러닝 모델, 이미지 모자이크 처리)</li>
+              <li class="list-group-item">🌍 다국어 지원 (게임/앱 내 다국어)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-    <!-- 📚 프로젝트 -->
-    <section id="project" class="content-section visible">
-      <h2>📚 프로젝트</h2>
-    
-      <!-- 프로젝트 목록 (네이버 블로그 글 리스트 느낌) -->
-      <div class="blog-list">
-    
-        <div class="blog-preview" onclick="showBlogDetail('militalk')">
-          <div class="blog-thumb"><span class="emoji">🗨️</span></div>
-          <div class="blog-meta">
-            <span class="blog-cat">#개인 #AI #공공데이터 #수상</span>
-            <span class="blog-date">2024.02 ~</span>
+      <!-- 프로젝트 섹션 -->
+      <section id="project" class="tab-pane fade content-section">
+        <h2 class="mb-4">📚 프로젝트</h2>
+        <div class="row g-3 mb-4">
+          <div class="col-md-4">
+            <div class="card h-100 blog-preview" onclick="showBlogDetail('militalk')">
+              <div class="card-body">
+                <span class="badge bg-success mb-1">#개인 #AI #공공데이터 #수상</span>
+                <div class="text-muted mb-1" style="font-size:0.9em;">2024.02 ~</div>
+                <h5 class="card-title">🗨️ Militalk (밀리톡) <span class="blog-award" title="수상작">🏆</span></h5>
+                <p class="card-text">군인과 가족/예비역에게 국방 실시간 정보와 챗봇 서비스를 제공</p>
+              </div>
+            </div>
           </div>
-          <div class="blog-title">Militalk (밀리톡) - 군생활 실시간 AI 챗봇 <span class="blog-award">🏆</span></div>
-          <div class="blog-desc">군인과 가족/예비역에게 국방 실시간 정보와 챗봇 서비스를 제공</div>
-        </div>
-    
-        <div class="blog-preview" onclick="showBlogDetail('benefits')">
-          <div class="blog-thumb"><span class="emoji">💸</span></div>
-          <div class="blog-meta">
-            <span class="blog-cat">#개인 #안드앱 #할인</span>
-            <span class="blog-date">2024.06.01 ~ 2024.06.10</span>
+          <div class="col-md-4">
+            <div class="card h-100 blog-preview" onclick="showBlogDetail('benefits')">
+              <div class="card-body">
+                <span class="badge bg-info mb-1">#개인 #안드앱 #할인</span>
+                <div class="text-muted mb-1" style="font-size:0.9em;">2024.06.01 ~ 2024.06.10</div>
+                <h5 class="card-title">💸 혜택병사 - 군인 전용 혜택/할인 실시간 안내앱</h5>
+                <p class="card-text">군생활 시간·비용 절약 실용 App (국방부 공공데이터 활용)</p>
+              </div>
+            </div>
           </div>
-          <div class="blog-title">혜택병사 - 군인 전용 혜택/할인 실시간 안내앱</div>
-          <div class="blog-desc">군생활의 시간·비용을 절약하는 실용 App (국방부 공공데이터 활용)</div>
-        </div>
-    
-        <div class="blog-preview" onclick="showBlogDetail('skumap')">
-          <div class="blog-thumb"><span class="emoji">📍</span></div>
-          <div class="blog-meta">
-            <span class="blog-cat">#개인 #캠퍼스지도</span>
-            <span class="blog-date">2021.09 ~ 2024.01</span>
+          <div class="col-md-4">
+            <div class="card h-100 blog-preview" onclick="showBlogDetail('skumap')">
+              <div class="card-body">
+                <span class="badge bg-secondary mb-1">#개인 #캠퍼스지도</span>
+                <div class="text-muted mb-1" style="font-size:0.9em;">2021.09 ~ 2024.01</div>
+                <h5 class="card-title">📍 성결대 캠퍼스 맵 - 실시간 경로/시설 안내 지도앱</h5>
+                <p class="card-text">신입생·방문객이 쉽게 학교를 탐색할 수 있는 모바일 지도 서비스</p>
+              </div>
+            </div>
           </div>
-          <div class="blog-title">성결대 캠퍼스 맵 - 실시간 경로/시설 안내 지도앱</div>
-          <div class="blog-desc">신입생·방문객이 쉽게 학교를 탐색할 수 있는 모바일 지도 서비스</div>
         </div>
-        <!-- ...다른 프로젝트도 추가 -->
-      </div>
-    
-      
-      <!-- 상세글 (클릭 시 펼침, 하나만 열리도록)-->
-      <div id="blog-detail-militalk" class="blog-detail">
-        <h3>🗨️ Militalk (밀리톡) <span style="font-size:0.8em;color:#03C75A;">2025 공공데이터 활용 경진대회 출품작</span></h3>
-        <div class="blog-info-box">
-          <b>기간</b>: 2024.02 ~ <br>
-          <b>카테고리</b>: AI, 챗봇, 군생활, 공공데이터<br>
-          <b>수상</b>: 2025 국방부 경진대회 출품
-        </div>
-        <div class="blog-body">
-          <p><b>프로젝트 개요</b><br>
-          군인·가족·예비역 대상 실시간 군생활 맞춤형 챗봇(AI+오픈API 기반)을 개발. 카카오톡/슬랙/웹 등에서 사용 가능하며, GPT-3.5와 국방부 공공데이터를 함께 사용해 기존 검색보다 쉽고 정확한 답변과 위기상황 응원 안내가 가능.</p>
+
+        <!-- 상세글 (클릭 시 펼침, 하나씩만 표시) -->
+        <div id="blog-detail-militalk" class="blog-detail card card-body mb-3">
+          <h3>🗨️ Militalk (밀리톡) <span class="text-success ms-2" style="font-size:0.8em;">2025 공공데이터 활용 경진대회 출품작</span></h3>
+          <div class="mb-2 small">
+            <b>기간</b>: 2024.02 ~ <br>
+            <b>카테고리</b>: AI, 챗봇, 군생활, 공공데이터 <br>
+            <b>수상</b>: 2025 국방부 경진대회 출품
+          </div>
+          <p class="mb-1"><b>프로젝트 개요</b><br>
+            군인·가족·예비역 대상 실시간 군생활 맞춤형 챗봇(AI+오픈API 기반)을 개발...</p>
           <hr>
           <b>핵심 기능</b>
           <ul>
             <li>국방 오픈 API 실시간 조회(복지, 월급, 식단, 병원 등 10+종)</li>
             <li>GPT-3.5 통합 자연어 질의, 감정 대응(위기 발화 시 1303 안내)</li>
-            <li>사용자 입력 자유화(자연어 날짜/계급/분야 자동 파싱, 이모티콘 안내 등)</li>
+            <li>사용자 입력 자유화(자연어 날짜/계급/분야 자동 파싱 등)</li>
           </ul>
-    
           <b>사용 기술</b>
           <ul>
-            <li>Python, Flask, OpenAI, 국방부 OpenAPI, RESTful API 등</li>
+            <li>Python, Flask, OpenAI, 국방부 OpenAPI, RESTful API</li>
             <li>카카오챗봇, 슬랙 연동, 단독 백엔드 설계/구현</li>
           </ul>
-    
           <b>성과 및 성장</b>
           <ul>
             <li>공공데이터-실무 직접연동, 위기발화 탐지 자동실행 경험</li>
             <li>실제 장병/가족들의 반응 피드백 수집 및 서비스 개선</li>
           </ul>
-          <div class="blog-linkbox">
-            <a href="https://github.com/enddl3788/MilliTalk-chatbot" target="_blank">🐱 GitHub 코드</a> / 
-            <a href="http://pf.kakao.com/_JkmCn" target="_blank">카카오톡 체험하기</a>
+          <div>
+            <a href="https://github.com/enddl3788/MilliTalk-chatbot" class="btn btn-outline-dark btn-sm" target="_blank">🐱 GitHub 코드</a>
+            <a href="http://pf.kakao.com/_JkmCn" class="btn btn-success btn-sm ms-2" target="_blank">카카오톡 체험</a>
           </div>
           <hr>
-          <div class="blog-write">작성자 : 송예빈 enddl3788@naver.com</div>
+          <div class="fst-italic small text-end">작성자 : 송예빈 enddl3788@naver.com</div>
         </div>
-      </div>
-    
-      <!-- 혜택병사 상세 -->
-      <div id="blog-detail-benefits" class="blog-detail">
-        <h3>💸 혜택병사 - Military Benefits</h3>
-        <div class="blog-info-box">
-          <b>기간</b>: 2024.06.01 ~ 2024.06.10 <br>
-          <b>카테고리</b>: 안드로이드, 할인, 군인전용, 공공데이터<br>
-          <b>수상</b>: 2024 국방부 경진대회 출품
-        </div>
-        <div class="blog-body">
-          <p><b>프로젝트 개요</b><br>
-          군인 전용 혜택/할인 정보를 실시간으로 안내하는 모바일 앱. 
-          위치(GPS) 기반·지역 기반 추천,검색·이벤트 알림 지원.<br>
-          (실제 국방 공공데이터 API 직접 연동! UI/UX 실사용에 초점)</p>
+        <!-- 혜택병사 상세 -->
+        <div id="blog-detail-benefits" class="blog-detail card card-body mb-3">
+          <h3>💸 혜택병사 - Military Benefits</h3>
+          <div class="mb-2 small">
+            <b>기간</b>: 2024.06.01 ~ 2024.06.10 <br>
+            <b>카테고리</b>: 안드로이드, 할인, 군인전용, 공공데이터 <br>
+            <b>수상</b>: 2024 국방부 경진대회 출품
+          </div>
+          <p>
+            <b>프로젝트 개요</b><br>
+            군인 전용 혜택/할인 정보를 실시간으로 안내하는 모바일 앱.
+          </p>
           <hr>
           <b>주요 기능/경험</b>
           <ul>
@@ -232,36 +271,27 @@
             <li>GPS 인근 탐색·검색, 최신 이벤트/알림 지원</li>
             <li>UI/UX 설계 및 앱 전 과정 End-to-End 수행</li>
           </ul>
-          <div class="blog-linkbox">
-            <a href="https://play.google.com/store/apps/details?id=com.yebin.militarybenefits" target="_blank">➡️ Google Play</a>
-          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.yebin.militarybenefits" class="btn btn-outline-success btn-sm" target="_blank">➡️ Google Play</a>
           <hr>
-          <div class="blog-write">작성자 : 송예빈 enddl3788@naver.com</div>
+          <div class="fst-italic small text-end">작성자 : 송예빈 enddl3788@naver.com</div>
         </div>
-      </div>
-      
-      <div id="blog-detail-skumap" class="blog-detail">
-        <h3>📍 성결대 캠퍼스 맵 - SKU MAP</h3>
-        <div class="blog-info-box">
-          <b>기간</b>: 2021.09.01 ~ 2024.01.01 <br>
-          <b>카테고리</b>: 지도/LBS, 학교생활, 캠퍼스, Mobile App
-        </div>
-        <div class="blog-body">
-          <p>
+        <div id="blog-detail-skumap" class="blog-detail card card-body mb-3">
+          <h3>📍 성결대 캠퍼스 맵 - SKU MAP</h3>
+          <div class="mb-2 small">
+            <b>기간</b>: 2021.09.01 ~ 2024.01.01 <br>
+            <b>카테고리</b>: 지도/LBS, 학교생활, 캠퍼스, Mobile App
+          </div>
+          <p class="mb-1">
             <b>프로젝트 개요</b><br>
-            <strong>성결대 캠퍼스 맵</strong>은 성결대학교 학생 및 방문자라면 누구에게나 필요한
-            ‘캠퍼스 내 건물/시설/셔틀 위치 안내’ 기능을 제공하는 안드로이드 모바일 앱입니다.<br>
-            특히 신입생/방문객이 각종 강의실, 건물, 식당, 도서관, 셔틀버스 등의 위치를 빠르고 쉽게 찾도록 
-            <span style="color:#03C75A;font-weight:bold;">실시간 지도·경로 안내</span>와 사용 친화적 UI/UX에 집중해 설계했습니다.
+            <strong>성결대 캠퍼스 맵</strong>은 성결대학교 학생 및 방문자라면 누구에게나 필요한 ‘캠퍼스 내 건물/시설/셔틀 위치 안내’ 기능을 제공하는 안드로이드 앱입니다.
           </p>
           <hr>
-      
           <b>✨ 주요 기능</b>
           <ul>
-            <li>🏢 <b>건물 정보 제공</b> : 캠퍼스 내 모든 건물의 이름/용도/층별 정보</li>
+            <li>🏢 <b>건물 정보 제공</b> : 캠퍼스 내 모든 건물 정보</li>
             <li>📍 <b>위치 정보 제공</b> : GPS 기반 실시간 내 위치 + 주변 건물 시각화</li>
-            <li>🚶‍♀️ <b>경로 안내</b> : 현재 위치 ~ 목표 건물까지 최적 경로 탐색·안내</li>
-            <li>🚌 <b>셔틀버스 정보</b> : 셔틀 노선/시간표/정류장 등 위치 및 운행 정보</li>
+            <li>🚶‍♀️ <b>경로 안내</b> : 최적 경로 탐색·안내</li>
+            <li>🚌 <b>셔틀버스 정보</b> : 노선/시간표/정류장 등 안내</li>
             <li>🏫 <b>학교 생활 시설 안내</b> : 도서관/학생회관/식당 등 위치와 운영 정보</li>
           </ul>
           <hr>
@@ -303,53 +333,81 @@
             <li>🚀 사용자 피드백 기반 앱 성능·UI 개선 경험</li>
           </ul>
           <hr>
-          <div class="blog-linkbox">
-            <a href="https://play.google.com/store/apps/details?id=com.yebin.SKUMAP" target="_blank">➡️ Google Play 다운로드</a>
-            |
-            <a href="https://github.com/enddl3788/SKU_MAP" target="_blank">🐱 GitHub 코드</a>
+          <div>
+            <a href="https://play.google.com/store/apps/details?id=com.yebin.SKUMAP" target="_blank" class="btn btn-outline-success btn-sm">➡️ Google Play 다운로드</a>
+            <a href="https://github.com/enddl3788/SKU_MAP" target="_blank" class="btn btn-outline-dark btn-sm ms-2">🐱 GitHub 코드</a>
           </div>
           <hr>
-          <div class="blog-write">개발자 : 송예빈 enddl3788@naver.com</div>
+          <div class="fst-italic small text-end">개발자 : 송예빈 enddl3788@naver.com</div>
         </div>
-      </div>
+      </section>
 
-    </section>
+      <!-- ✏ 학력 -->
+      <section id="edu" class="tab-pane fade content-section">
+        <h2 class="mb-3">✏ 학력</h2>
+        <div class="card card-body">
+          <div>
+            <b>컴퓨터공학과 학사</b><br>
+            2020.03 ~ 2024.02<br>
+            <span class="text-secondary">성결대학교 - 경기도 안양시</span>
+          </div>
+        </div>
+      </section>
 
-    <!-- ✏ 학력 -->
-    <section id="edu" class="content-section visible">
-      <h2>✏ 학력</h2>
-      <p>
-        컴퓨터공학과 학사<br>
-        2020.03 ~ 2024.02<br>
-        성결대학교 - 경기도 안양시
-      </p>
-    </section>
+      <!-- 🏆 수상 내역 -->
+      <section id="award" class="tab-pane fade content-section">
+        <h2 class="mb-3">🏆 수상 내역</h2>
+        <div class="card card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">2022년도 2학기 교내 경진대회 머신러닝 부문 2위</li>
+            <li class="list-group-item">2021년도 2학기 교내 경진대회 자바프로그래밍 부문 1위</li>
+            <li class="list-group-item">2021년도 1학기 교내 경진대회 유닉스와 리눅스 부문 2위</li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- 🏆 수상 내역 -->
-    <section id="award" class="content-section visible">
-      <h2>🏆 수상 내역</h2>
-      <ul>
-        <li>2022년도 2학기 교내 경진대회 머신러닝 부문 2위</li>
-        <li>2021년도 2학기 교내 경진대회 자바프로그래밍 부문 1위</li>
-        <li>2021년도 1학기 교내 경진대회 유닉스와 리눅스 부문 2위</li>
-      </ul>
-    </section>
+      <!-- 📩 연락처 -->
+      <section id="contact" class="tab-pane fade content-section">
+        <h2 class="mb-3">📩 연락처</h2>
+        <div class="card card-body">
+          <ul class="list-unstyled">
+            <li>📧 010-2866-3788 / enddl3788@naver.com</li>
+            <li>🔗 <a href="https://play.google.com/store/apps/dev?id=7544782687645797857" target="_blank">Google Play 개발자 페이지</a></li>
+            <li>🐱 <a href="https://github.com/enddl3788" target="_blank">github.com/enddl3788</a></li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- 📩 연락처 (네이버 블로그/깃허브 링크 포함) -->
-    <section id="contact" class="content-section">
-      <h2>📩 연락처</h2>
-      <ul>
-        <li>📧 010-2866-3788 / enddl3788@naver.com</li>
-        <li>🔗 <a href="https://play.google.com/store/apps/dev?id=7544782687645797857" target="_blank">Google Play 개발자 페이지</a></li>
-        <li>🐱 <a href="https://github.com/enddl3788" target="_blank">github.com/enddl3788</a></li>
-      </ul>
-    </section>
+    </div>
   </main>
 
-  <footer>
+  <footer class="text-center text-muted py-4 border-top mt-4" style="font-size:0.95em">
     © 2026 송예빈. All rights reserved.
   </footer>
 
+  <!-- Bootstrap JS, Popper.js and main.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // 상세 펼침/접기 + 탭 연동 (showBlogDetail 함수)
+    function showBlogDetail(key) {
+      // 모든 상세글을 숨김
+      document.querySelectorAll('.blog-detail').forEach(el => el.style.display='none');
+      // 해당 상세글만 표시
+      const detail = document.getElementById('blog-detail-' + key);
+      if (detail) detail.style.display = 'block';
+      // 프로젝트 탭 이동 (모바일에서 사용시) 
+      var projectTab = document.querySelector('[href="#project"]');
+      if (projectTab) projectTab.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    // 탭 이동시 상세 닫힘
+    document.querySelectorAll('.nav-link').forEach(el=>{
+      el.addEventListener('show.bs.tab', function() {
+        document.querySelectorAll('.blog-detail').forEach(el => el.style.display='none');
+      });
+    });
+  </script>
   <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
 </body>
 </html>
