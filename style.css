@@ -1,0 +1,55 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #f8f9fa;
+  color: #222;
+}
+.naver-header {
+  background: #fff;
+  border-bottom: 1.5px solid #e4e4e4;
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo { font-size:28px; font-weight: bold; margin-right: 40px; }
+.naver-searchbar {
+  border: 2px solid #03C75A;
+  border-radius: 25px;
+  padding: 4px;
+  display: flex;
+  background: #fff;
+}
+.naver-searchbar input {
+  border: none;
+  padding: 7px 20px;
+  width: 270px;
+  font-size:18px;
+  background: none;
+}
+.naver-searchbar button {
+  background: #03C75A;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size:18px;
+  padding: 0 18px;
+}
+.naver-tabs {
+  display: flex; justify-content: center; background: #f5f8fa; border-bottom:1px solid #e4e4e4;
+}
+.naver-tabs ul { display: flex; gap: 8px;}
+.naver-tabs li {
+  list-style: none;
+  padding: 12px 22px;
+  cursor: pointer;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+}
+.naver-tabs .active {
+  color: #03C75A;
+  border-bottom: 3px solid #03C75A;
+  font-weight: bold;
+}
+.content-section { display:none; padding: 44px 0; max-width: 700px; margin:0 auto;}
+.content-section.visible { display: block; }
+.blog-detail { display:none; }
