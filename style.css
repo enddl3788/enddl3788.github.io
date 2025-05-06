@@ -2,6 +2,8 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   background: #f8f9fa;
   color: #222;
+  overflow-x: hidden; /* 수평 스크롤을 숨깁니다 */
+  margin: 0;
 }
 .logo { font-size:28px; font-weight: bold; margin-right: 40px; }
 .naver-tabs ul { 
@@ -97,4 +99,35 @@ body {
 }
 .scroll-btn.right {
   right: 5px;
+}
+
+.slides {
+  display:grid;
+  gap:1rem;
+  grid-auto-flow:column;
+  overflow-y:auto;
+  
+/*   스크롤 체이닝을 방지 */
+/*   auto; 기본값, 스크롤 이벤트 전파 */
+/*   contain; 스크롤 체이닝 방지 (모바일 이펙트 노출O) */
+/*   none; 스크롤 체이닝 방지 (모바일 이펙트 노출X) */
+  overscroll-behavior-x:contain;
+  
+/*   snap position(X축,Y축)과 Snap Strictness(달라붙는 정도)를 지정 */
+/*   하위 item에 scroll-snap-align  속성 추가해야함 */
+/*   mandatory: 스크롤 이동방향 다음 요소가 영역 채울때까지 달라붙음. */
+/*   proximity: 스크롤 이동방향 다음 요소가 영역 거의 채을때 달라붙음.
+                그 사이에 지점에서 스크롤하면 스크롤 위치에서 멈춤. */
+  scroll-snap-type:x mandatory;
+  scrollbar-width:none;
+}
+
+.slides::-webkit-scrollbar {
+  display: none;
+}
+
+.slides img {
+/*   scroll-snap이 달라붙는 item 기준 start, end, center */
+  scroll-snap-align: start;
+  height:300px;
 }
