@@ -99,3 +99,18 @@ window.addEventListener('DOMContentLoaded', function() {
   // nav-link의 active는 맨 처음꺼만(아닌 전체 삭제해도 무방)
   document.querySelectorAll('.nav-link').forEach(tab => tab.classList.remove('active'));
 });
+
+// '송예빈' 글자만 입력되도록 설정
+const searchInput = document.getElementById('search-input');
+const targetText = '송예빈';  // 목표 텍스트
+
+searchInput.addEventListener('input', function() {
+  let inputLength = this.value.length;
+  // 입력 길이가 '송예빈' 길이를 넘지 않도록 설정
+  if (inputLength > targetText.length) {
+    this.value = targetText;
+  } else {
+    // 사용자 입력에 상관없이 '송예빈' 텍스트로 채워짐
+    this.value = targetText.substring(0, inputLength);
+  }
+});

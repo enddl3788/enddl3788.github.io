@@ -32,9 +32,9 @@
       <div class="container">
         <div class="d-flex align-items-center">
           <!-- 로고 -->
-          <div class="logo fw-bold" style="font-size:2rem; letter-spacing:1px; color:#03C75A; min-width:140px;">
+          <a href="/" class="logo fw-bold" style="text-decoration: none; font-size:2rem; letter-spacing:1px; color:#03C75A; min-width:140px;">
             DEVELOPER
-          </div>
+          </a>
           <!-- 검색창 -->
           <form class="search flex-grow-1 ms-3">
             <div 
@@ -44,18 +44,19 @@
               <!-- 인풋 (아이콘 공간 만큼 padding-left) -->
               <input 
                 type="text" 
+                id="search-input"
                 class="form-control border-0 bg-transparent shadow-none flex-grow-1"
-                value="송예빈" 
-                readonly 
+                placeholder="검색" 
+                value="송예빈"
                 style="font-size:1.08rem; color:#222; font-weight:500; background:transparent; padding:20px; height:44px; min-width:90px;">
 
               <!-- 돋보기 아이콘 -->
-              <span style="position:absolute; right:18px; color:#03C75A; z-index:2;">
+              <a href="/" style="position:absolute; right:18px; color:#03C75A; z-index:2;">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                   <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
                   <line x1="16.4142" y1="16.586" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
-              </span>
+              </a>
             </div>
           </form>
         </div>
@@ -119,7 +120,7 @@
                      </tr>
                   </tbody>
                 </table>
-                <img class="rounded-4 shadow" src="img/yebin.png" height="120" alt="송예빈" />
+                <img class="rounded-4 shadow" src="img/yebin.png" height="120" alt="송예빈" style="filter: blur(3px);" />
               </div>            
               <!-- 자기소개 내용 -->
               <h5>소개</h5>
