@@ -33,7 +33,7 @@ body {
   
 .content-section { 
   background-color: #f7f7f9;
-  padding: 30px;
+  padding: 3%;
   display: flex; /* 부모 요소를 Flexbox로 설정 */
   justify-content: center; /* 내부 요소 가운데 정렬 */
   max-width: 700px; 

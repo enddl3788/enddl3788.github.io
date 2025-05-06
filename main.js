@@ -91,3 +91,11 @@ function showBlogDetail(targetId) {
     }
   });
 }
+
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.tab-pane').forEach(function(el){
+    el.classList.add('show', 'active');
+  });
+  // nav-link의 active는 맨 처음꺼만(아닌 전체 삭제해도 무방)
+  document.querySelectorAll('.nav-link').forEach(tab => tab.classList.remove('active'));
+});
