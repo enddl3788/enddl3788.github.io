@@ -8,6 +8,7 @@ body {
   display: flex; 
   gap: 8px;
   padding: 5px;
+  margin-inline: 5%;
 }
 .naver-tabs li {
   list-style: none;
@@ -27,24 +28,73 @@ body {
   background: #f7f7f9; 
   color:#222225; 
 }
-.content-section:not(.visible) { display: none; }
 .blog-preview { cursor:pointer;}
 .blog-detail { display:none; }
-#about {
+  
+.content-section { 
   background-color: #f7f7f9;
   padding: 30px;
   display: flex; /* 부모 요소를 Flexbox로 설정 */
   justify-content: center; /* 내부 요소 가운데 정렬 */
-  
-}
-
-.content-section { 
-  padding: 44px; 
   max-width: 700px; 
   margin: auto;
+  margin-block: 20px;
   display: flex;
   flex-direction: column; /* 내부 요소를 세로로 정렬 */
   align-items: center; /* 내부 요소 가운데 정렬 */
 }
-.content-section.visible { display: block; }
 .blog-detail { display:none; }
+
+/* 마진 영역 내 탭만 보이게 마스킹 */
+.tab-mask {
+  margin-inline: 5%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 스크롤 가능한 탭 리스트 */
+.tab-wrapper {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+.tab-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* 탭 스타일 */
+.nav-pills {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* 스크롤 버튼 */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+.scroll-btn:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+.scroll-btn.left {
+  left: 5px;
+}
+.scroll-btn.right {
+  right: 5px;
+}
