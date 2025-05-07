@@ -115,43 +115,17 @@ searchInput.addEventListener('input', function() {
   }
 });
 
-const sliderSection = document.querySelector('.slider-section');
-const slides = document.querySelector('.slides');
+/*
+ JS to toggle scroll axis styles
+*/
+const control = document.getElementById("direction-toggle");
+const marquees = document.querySelectorAll(".marquee");
+const img_wrapper = document.querySelector(".wrapper");
 
-// 슬라이더 높이/이동 범위 계산 함수
-// (슬라이더 총 너비 - 뷰포트 너비 + 뷰포트 높이) -> 슬라이더 영역 높이
-function setSliderHeight() {
-  const totalSlideWidth = slides.scrollWidth;
-  const viewportWidth = window.innerWidth;
-  const viewportHeight = window.innerHeight;
-  const sliderHeight = totalSlideWidth - viewportWidth + viewportHeight;
-  sliderSection.style.height = sliderHeight + 'px';
-}
-
-// 이미지 로드가 완료된 후 정확한 계산을 위해:
-// 1. window load 이벤트 (페이지 전체 로드)
-window.addEventListener('load', setSliderHeight);
-
-// 2. 각 이미지의 load 이벤트 (이미지가 비동기로 로드될 경우 대비)
-document.querySelectorAll('.moblie_img').forEach((img) => {
-  if (!img.complete) {
-    img.addEventListener('load', setSliderHeight);
-  }
-});
-
-// (필요하다면 스크롤 이벤트에도 throttle 등으로 호출해서 최신 계산값을 유지)
-// window.addEventListener('scroll', throttle(setSliderHeight, 100));
-
-// 스크롤 이벤트로 슬라이더 좌우 이동 적용
-window.addEventListener('scroll', () => {
-  const sliderTop = sliderSection.offsetTop;
-  const sliderHeight = sliderSection.offsetHeight;
-  const scrollY = window.pageYOffset;
-
-  if (scrollY >= sliderTop && scrollY <= sliderTop + sliderHeight) {
-    const progress = (scrollY - sliderTop) / (sliderHeight - window.innerHeight);
-    const maxTranslateX = slides.scrollWidth - window.innerWidth;
-    const translateX = progress * maxTranslateX;
-    slides.style.transform = `translateX(-${translateX}px)`;
-  }
+control.addEventListener("click", () => {
+  control.classList.toggle("toggle--vertical");
+  img_wrapper.classList.toggle("wrapper--vertical");
+  [...marquees].forEach((marquee) =>
+    marquee.classList.toggle("marquee--vertical")
+  );
 });

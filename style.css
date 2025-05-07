@@ -100,28 +100,57 @@ body {
 .scroll-btn.right {
   right: 5px;
 }
-    /* 슬라이더 전체 영역 (세로 스크롤 영역) */
-    .slider-section {
-      position: relative;
-      /* 나중에 JS로 동적으로 높이를 지정합니다. */
-      overflow: hidden;
-    }
-    /* 슬라이더 고정 영역: 화면에 고정시키기 위해 sticky 사용 */
-    .slides-container {
-      position: sticky;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: auto;
-      overflow: hidden;
-    }
-    /* 실제 슬라이더 (이미지들을 담은 가로 flex 컨테이너) */
-    .slides {
-      display: flex;
-      transition: transform 0.1s ease-out;
-    }
-    /* 이미지 스타일: 화면 너비에 맞춰 고정하고, flex item으로 처리 */
-    .moblie_img {
-      height: 300px;
-      flex-shrink: 0;
-    }
+
+:root {
+  --size: clamp(10rem, 40vh, 30rem); /* vmin → vh로 변경 */
+  --gap: calc(var(--size) / 14);
+  --duration: 50s;
+  --scroll-start: 0;
+  --scroll-end: calc(-100% - var(--gap));
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  mask-image: linear-gradient(
+    var(--mask-direction, to right),
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 20%,
+    hsl(0 0% 0% / 1) 80%,
+    hsl(0 0% 0% / 0)
+  );
+}
+
+.marquee__group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  animation: scroll-x var(--duration) linear infinite;
+}
+
+@keyframes scroll-x {
+  from {
+    transform: translateX(var(--scroll-start));
+  }
+  to {
+    transform: translateX(var(--scroll-end));
+  }
+}
+
+/* Parent wrapper */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.moblie_img {
+  height: 50vh;
+}
+
+.project-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
