@@ -35,7 +35,7 @@
   </script>
   </head>
   <!-- 우클릭, 드래그 방지 -->
-  <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onkeydown="return false">
+  <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
     <header class="naver-header py-3" style="background:#fff; border-bottom:1.5px solid #e2e5e6;">
       <div class="container">
         <div class="d-flex align-items-center">
@@ -48,18 +48,15 @@
             <div 
               class="d-flex align-items-center rounded-pill shadow-sm bg-white px-2"
               style="height:48px; border:1.5px solid #e5e5e5; position:relative; max-width:550px; width:100%;">
-            
-              <!-- 인풋 (아이콘 공간 만큼 padding-left) -->
               <input 
                 type="text" 
                 id="search-input"
                 class="form-control border-0 bg-transparent shadow-none flex-grow-1"
-                placeholder="검색" 
+                placeholder="검색"
                 value="송예빈"
                 style="font-size:1.08rem; color:#222; font-weight:500; background:transparent; padding:20px; height:44px; min-width:90px;">
-
               <!-- 돋보기 아이콘 -->
-              <a href="/" style="position:absolute; right:18px; color:#03C75A; z-index:2;">
+              <a href="/" id="search_icon" style="position:absolute; right:18px; color:#03C75A; z-index:2;">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                   <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
                   <line x1="16.4142" y1="16.586" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -246,6 +243,32 @@
               <strong>Militalk</strong>는 대한민국 국방부 오픈 API를 활용해 군인과 가족, 예비역에게 실시간 정보와 챗봇 서비스를 제공하는 <b>Flask 기반 챗봇 API 서버</b>입니다.
               카카오톡, 슬랙, 웹 등 다양한 환경에 연동 가능하며 <b>GPT-4.1 기반 자연어 질의응답</b>도 지원합니다.
             </p>
+            <hr>
+            <article class="wrapper">
+              <div class="marquee">
+                <div class="marquee__group">
+                  <img class="moblie_img" src="img\project\militalk\militalk_1.png" alt="밀리톡 1">
+                  <img class="moblie_img" src="img\project\militalk\militalk_2.png" alt="밀리톡 2">
+                  <img class="moblie_img" src="img\project\militalk\militalk_3.png" alt="밀리톡 3">
+                  <img class="moblie_img" src="img\project\militalk\militalk_4.png" alt="밀리톡 4">
+                  <img class="moblie_img" src="img\project\militalk\militalk_5.png" alt="밀리톡 5">
+                  <img class="moblie_img" src="img\project\militalk\militalk_6.png" alt="밀리톡 6">
+                  <img class="moblie_img" src="img\project\militalk\militalk_7.png" alt="밀리톡 7">
+                  <img class="moblie_img" src="img\project\militalk\militalk_8.png" alt="밀리톡 8">
+                </div>
+
+                <div aria-hidden="true" class="marquee__group">
+                  <img class="moblie_img" src="img\project\militalk\militalk_1.png" alt="밀리톡 1">
+                  <img class="moblie_img" src="img\project\militalk\militalk_2.png" alt="밀리톡 2">
+                  <img class="moblie_img" src="img\project\militalk\militalk_3.png" alt="밀리톡 3">
+                  <img class="moblie_img" src="img\project\militalk\militalk_4.png" alt="밀리톡 4">
+                  <img class="moblie_img" src="img\project\militalk\militalk_5.png" alt="밀리톡 5">
+                  <img class="moblie_img" src="img\project\militalk\militalk_6.png" alt="밀리톡 6">
+                  <img class="moblie_img" src="img\project\militalk\militalk_7.png" alt="밀리톡 7">
+                  <img class="moblie_img" src="img\project\militalk\militalk_8.png" alt="밀리톡 8">
+                </div>
+              </div>
+            </article>
             <hr>
             <b>✨ 핵심 기능</b>
             <ul>

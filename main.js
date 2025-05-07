@@ -35,7 +35,7 @@ function showAllSections() {
   document.querySelectorAll('.nav-link').forEach(tab => tab.classList.remove('active'));
 }
 document.querySelector('.logo').addEventListener('click', showAllSections);
-document.querySelector('.search').addEventListener('click', showAllSections);
+document.querySelector('#search_icon').addEventListener('click', showAllSections);
 // (검색창 옆 돋보기 아이콘 등 다른 트리거가 있다면 여기도 showAllSections 추가 연결)
 
 // 네비탭 클릭 시 전체 펼쳐진 상태면: 전체 초기화 + 해당 탭 콘텐츠만 show/active
@@ -117,15 +117,6 @@ searchInput.addEventListener('input', function() {
 
 /*
  JS to toggle scroll axis styles
-*/
-const control = document.getElementById("direction-toggle");
+*/;
 const marquees = document.querySelectorAll(".marquee");
 const img_wrapper = document.querySelector(".wrapper");
-
-control.addEventListener("click", () => {
-  control.classList.toggle("toggle--vertical");
-  img_wrapper.classList.toggle("wrapper--vertical");
-  [...marquees].forEach((marquee) =>
-    marquee.classList.toggle("marquee--vertical")
-  );
-});
