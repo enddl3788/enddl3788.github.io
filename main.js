@@ -69,7 +69,7 @@ document.querySelectorAll('.nav-link').forEach(tab => {
   });
 });
 
-// ---- 블로그 상세 보기 (그대로 유지) ----
+// ---- 블로그 상세 보기 (수정된 버전) ----
 function showBlogDetail(targetId) {
   // 모든 상세글 숨기기
   document.querySelectorAll('.blog-detail').forEach(function(el) {
@@ -77,7 +77,8 @@ function showBlogDetail(targetId) {
   });
 
   // 선택한 상세글 보이기
-  document.getElementById('blog-detail-' + targetId).style.display = 'block';
+  const detailElement = document.getElementById('blog-detail-' + targetId);
+  detailElement.style.display = 'block';
 
   // 클릭된 프리뷰에 'active' 클래스 부여
   document.querySelectorAll('.blog-preview').forEach(function(el) {
@@ -90,7 +91,11 @@ function showBlogDetail(targetId) {
       preview.classList.add('active');
     }
   });
+
+  // 상세보기로 부드럽게 스크롤
+  detailElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+
 
 window.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.tab-pane').forEach(function(el){
