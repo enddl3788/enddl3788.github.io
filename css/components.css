@@ -1,0 +1,82 @@
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.scroll-btn:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+.scroll-btn.left {
+  left: 5px;
+}
+
+.scroll-btn.right {
+  right: 5px;
+}
+
+.tab-mask {
+  margin-inline: 5%;
+  overflow: hidden;
+  position: relative;
+}
+
+.tab-wrapper {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.tab-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-pills {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.blog-preview {
+  cursor: pointer;
+}
+
+.blog-preview:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  cursor: pointer;
+}
+
+#search_icon {
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

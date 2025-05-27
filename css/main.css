@@ -1,0 +1,58 @@
+.logo { font-size:28px; font-weight: bold; margin-right: 40px; }
+
+.naver-header {
+  border-bottom: 1.5px;
+}
+
+.naver-header .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.naver-tabs ul {
+  display: flex;
+  gap: 8px;
+  padding: 5px;
+  margin-inline: 5%;
+}
+
+.naver-tabs li {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.naver-tabs .nav-link {
+  border-radius: 20px;
+  background: #f7f7f9;
+  color:#222225;
+}
+
+.naver-tabs .nav-link.active {
+  background: #03C75A;
+}
+
+.naver-searchbar input {
+  border: none;
+}
+
+.naver-searchbar button {
+  background: #03C75A;
+  border: none;
+}
+
+.content-section {
+  background-color: #f7f7f9;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  margin: auto;
+  margin-block: 20px;
+}
+
+.blog-detail{
+  display:none;
+}
