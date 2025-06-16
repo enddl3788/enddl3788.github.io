@@ -2,12 +2,44 @@
 
 .naver-header {
   border-bottom: 1.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .naver-header .logo {
-  font-size: 2rem;
-  font-weight: bold;
-  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.naver-header .search {
+  width: 100%;
+  max-width: 550px;
+}
+
+.naver-tabs {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.naver-tabs .tab-mask {
+  margin-inline: 0;
+  width: 100%;
+}
+.naver-tabs .tab-wrapper {
+  width: 100%;
+}
+.naver-tabs ul.nav {
+  width: 100%;
+  justify-content: center;
+}
+
+.scroll-btn.left, .scroll-btn.right {
+  position: static;
+  margin: 0 4px;
 }
 
 .naver-tabs ul {

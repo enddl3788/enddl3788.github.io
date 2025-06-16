@@ -1,0 +1,40 @@
+/* 소셜 버튼 스타일 */
+.social-btns {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  text-decoration: none;
+  color: #fff;
+}
+.social-btn.github {
+  background: #24292f;
+}
+.social-btn.github:hover {
+  background: #444d56;
+  transform: translateY(-2px) scale(1.04);
+}
+.social-btn.playstore {
+  background: #34a853;
+}
+.social-btn.playstore:hover {
+  background: #1e7d34;
+  transform: translateY(-2px) scale(1.04);
+}
+.social-btn svg {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+}

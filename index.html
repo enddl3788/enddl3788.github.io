@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/social-btns.css">
   
   <!-- 우클릭, 드래그 방지 -->
   <script type="text/javascript">
@@ -39,55 +40,58 @@
   </head>
   <!-- 우클릭, 드래그 방지 -->
   <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
-    <header class="naver-header py-3" style="background:#fff; border-bottom:1.5px solid #e2e5e6;">
-      <div class="container">
-        <div class="d-flex align-items-center">
-          <!-- 로고 -->
-          <a class="logo fw-bold" style="text-decoration: none; font-size:2rem; letter-spacing:1px; color:#03C75A; min-width:140px;">
-            DEVELOPER
-          </a>
-          <!-- 검색창 -->
-          <form class="search flex-grow-1 ms-3">
-            <div 
-              class="d-flex align-items-center rounded-pill shadow-sm bg-white px-2"
-              style="height:48px; border:1.5px solid #e5e5e5; position:relative; max-width:550px; width:100%;">
-              <input 
-                type="text" 
-                id="search-input"
-                class="form-control border-0 bg-transparent shadow-none flex-grow-1"
-                placeholder="검색"
-                value="송예빈"
-                style="font-size:1.08rem; color:#222; font-weight:500; background:transparent; padding:20px; height:44px; min-width:90px;">
-              <!-- 돋보기 아이콘 -->
-              <a id="search_icon" style="position:absolute; right:18px; color:#03C75A; z-index:2;">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                  <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
-                  <line x1="16.4142" y1="16.586" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-              </a>
-            </div>
-          </form>
+    <header class="naver-header py-3 d-flex flex-column align-items-center w-100" style="background:#fff; border-bottom:1.5px solid #e2e5e6;">
+      <div class="container d-flex flex-column align-items-center">
+        <div class="header-center-box d-flex flex-column align-items-center w-100">
+          <div class="d-flex flex-column flex-md-row align-items-center justify-content-center w-100 gap-3">
+            <!-- 로고 -->
+            <a class="logo fw-bold mb-2 mb-md-0" style="text-decoration: none; font-size:2rem; letter-spacing:1px; color:#03C75A; min-width:140px;">
+              DEVELOPER
+            </a>
+            <!-- 검색창 -->
+            <form class="search flex-grow-1" style="max-width:550px; width:100%;">
+              <div 
+                class="d-flex align-items-center rounded-pill shadow-sm bg-white px-2"
+                style="height:48px; border:1.5px solid #e5e5e5; position:relative; width:100%;">
+                <input 
+                  type="text" 
+                  id="search-input"
+                  class="form-control border-0 bg-transparent shadow-none flex-grow-1"
+                  placeholder="검색"
+                  value="송예빈"
+                  style="font-size:1.08rem; color:#222; font-weight:500; background:transparent; padding:20px; height:44px; min-width:90px;">
+                <!-- 돋보기 아이콘 -->
+                <a id="search_icon" style="position:absolute; right:18px; color:#03C75A; z-index:2;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                    <line x1="16.4142" y1="16.586" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </a>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </header>
     <!-- 네비 탭 -->
-    <nav class="naver-tabs bg-white border-bottom position-relative">
-      <!-- 왼쪽 버튼 -->
-      <button class="scroll-btn left" onclick="scrollTabs(-150)">&lt;</button>
-      <div class="tab-mask">
-        <div class="tab-wrapper">
-          <ul class="nav nav-pills" id="mainTabs" role="tablist">
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#about">👨‍💻 자기소개</a></li>
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#tech">🛠️ 기술 스택</a></li>
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#solo_project">📕 개인 프로젝트</a></li>
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#team_project">📚 팀 프로젝트</a></li>
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#award">🏆 수상 내역</a></li>
-          </ul>
+    <nav class="naver-tabs bg-white border-bottom position-relative w-100">
+      <div class="d-flex justify-content-center align-items-center w-100 position-relative" style="gap:0;">
+        <!-- 왼쪽 버튼 -->
+        <button class="scroll-btn left ms-0" onclick="scrollTabs(-150)">&lt;</button>
+        <div class="tab-mask flex-grow-1" style="margin-inline:0;">
+          <div class="tab-wrapper">
+            <ul class="nav nav-pills justify-content-center w-100" id="mainTabs" role="tablist">
+              <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#about">👨‍💻 자기소개</a></li>
+              <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#tech">🛠️ 기술 스택</a></li>
+              <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#solo_project">📕 개인 프로젝트</a></li>
+              <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#team_project">📚 팀 프로젝트</a></li>
+              <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#award">🏆 수상 내역</a></li>
+            </ul>
+          </div>
         </div>
+        <!-- 오른쪽 버튼 -->
+        <button class="scroll-btn right me-0" onclick="scrollTabs(150)">&gt;</button>
       </div>
-    
-      <!-- 오른쪽 버튼 -->
-      <button class="scroll-btn right" onclick="scrollTabs(150)">&gt;</button>
     </nav>
 
     <!-- Main 영역 -->
@@ -122,8 +126,16 @@
                     <tr>
                       <th>사이트</th>
                       <td>
-                        <a href="https://github.com/enddl3788"  target="_blank" style="text-decoration: none;">😺깃허브</a>
-                        <a href="https://play.google.com/store/apps/dev?id=7544782687645797857"  target="_blank" style="text-decoration: none;">▶구글플레이</a>
+                        <div class="social-btns">
+                          <a href="https://github.com/enddl3788" class="social-btn github" target="_blank" title="깃허브">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.48 2.87 8.28 6.84 9.63.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.18 9.18 0 0 1 2.5-.34c.85 0 1.7.11 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"></path></svg>
+                            <span>GitHub</span>
+                          </a>
+                          <a href="https://play.google.com/store/apps/dev?id=7544782687645797857" class="social-btn playstore" target="_blank" title="구글플레이">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.89 2.54c-.36.2-.6.57-.6.98v16.97c0 .41.23.78.6.98.36.2.8.18 1.14-.05l7.6-5.13-8.74-12.1c-.34-.47-.98-.6-1.44-.35zm9.13 11.6l2.98 2.01-2.98 2.01v-4.02zm7.08-2.97l-3.13-2.11-3.41 2.3 3.41 2.3 3.13-2.11c.36-.24.36-.77 0-1.01zm-3.13 6.09l3.13-2.11c.36-.24.36-.77 0-1.01l-3.13-2.11-3.41 2.3 3.41 2.3zm-4.08-2.7l-7.6 5.13c-.34.23-.78.25-1.14.05-.36-.2-.6-.57-.6-.98V3.52c0-.41.23-.78.6-.98.36-.2.8-.18 1.14.05l7.6 5.13v4.02z"></path></svg>
+                            <span>Google Play</span>
+                          </a>
+                        </div>
                       </td>
                      </tr>
                   </tbody>
