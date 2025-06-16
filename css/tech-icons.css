@@ -1,0 +1,45 @@
+/* 기술스택 아이콘 스타일 */
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin-bottom: 24px;
+  padding: 0;
+  list-style: none;
+}
+.tech-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 8px 16px;
+  font-weight: 500;
+  font-size: 1.05rem;
+  min-width: 120px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.tech-list li:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+}
+.tech-list img, .tech-list svg {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+@media (max-width: 600px) {
+  .tech-list {
+    gap: 8px 6px;
+    font-size: 0.97rem;
+  }
+  .tech-list li {
+    min-width: 90px;
+    padding: 7px 8px;
+  }
+  .tech-list img, .tech-list svg {
+    width: 22px;
+    height: 22px;
+  }
+}

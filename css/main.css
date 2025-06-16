@@ -2,44 +2,28 @@
 
 .naver-header {
   border-bottom: 1.5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
 }
 
 .naver-header .logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-.naver-header .search {
+.naver-header .container {
+  display: flex;
+  justify-content: center;
+}
+.naver-header .d-flex {
   width: 100%;
-  max-width: 550px;
+  max-width: 700px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .naver-tabs {
   display: flex;
   justify-content: center;
-  width: 100%;
-}
-.naver-tabs .tab-mask {
-  margin-inline: 0;
-  width: 100%;
-}
-.naver-tabs .tab-wrapper {
-  width: 100%;
-}
-.naver-tabs ul.nav {
-  width: 100%;
-  justify-content: center;
-}
-
-.scroll-btn.left, .scroll-btn.right {
-  position: static;
-  margin: 0 4px;
 }
 
 .naver-tabs ul {
@@ -47,6 +31,7 @@
   gap: 8px;
   padding: 5px;
   margin-inline: 5%;
+  justify-content: center;
 }
 
 .naver-tabs li {
@@ -63,6 +48,45 @@
 
 .naver-tabs .nav-link.active {
   background: #03C75A;
+}
+
+/* 네비 탭 버튼 위치 개선 */
+.naver-tabs .tab-mask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.naver-tabs .scroll-btn.left {
+  position: static;
+  margin-right: 6px;
+  left: unset;
+  top: unset;
+  transform: none;
+}
+.naver-tabs .scroll-btn.right {
+  position: static;
+  margin-left: 6px;
+  right: unset;
+  top: unset;
+  transform: none;
+}
+.naver-tabs .tab-wrapper {
+  flex-grow: 1;
+  min-width: 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.naver-tabs .tab-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* 탭 아이템이 잘리지 않도록 ul에 min-width 적용 */
+.naver-tabs ul.nav {
+  min-width: max-content;
 }
 
 .naver-searchbar input {
@@ -87,4 +111,60 @@
 
 .blog-detail{
   display:none;
+}
+
+/* 자기소개(about) 반응형 개선 */
+@media (max-width: 600px) {
+  #about .row.align-items-center {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+  #about .col-md-11 {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 8px;
+  }
+  #about .d-flex.justify-content-between.align-items-center {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 10px;
+  }
+  #about table {
+    width: 100% !important;
+    font-size: 0.97rem;
+  }
+  #about img.rounded-4 {
+    max-width: 120px;
+    width: 60vw;
+    height: auto !important;
+    margin: 12px auto 0 auto;
+    display: block;
+  }
+  #about .p-1 {
+    padding: 0.5rem 0.2rem !important;
+    word-break: keep-all;
+    text-align: left;
+  }
+  .naver-tabs .tab-mask {
+    gap: 2px;
+  }
+  .naver-tabs .scroll-btn.left,
+  .naver-tabs .scroll-btn.right {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    margin: 0 2px;
+  }
+}
+
+@media (max-width: 991px) {
+  .naver-header .d-flex,
+  .naver-header .container {
+    max-width: 100%;
+    justify-content: flex-start;
+  }
+  .naver-tabs .tab-mask,
+  .naver-tabs .tab-wrapper {
+    justify-content: flex-start;
+  }
 }

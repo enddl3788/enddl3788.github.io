@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" href="css/social-btns.css">
+  <link rel="stylesheet" href="css/tech-icons.css">
   
   <!-- 우클릭, 드래그 방지 -->
   <script type="text/javascript">
@@ -40,57 +41,51 @@
   </head>
   <!-- 우클릭, 드래그 방지 -->
   <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
-    <header class="naver-header py-3 d-flex flex-column align-items-center w-100" style="background:#fff; border-bottom:1.5px solid #e2e5e6;">
-      <div class="container d-flex flex-column align-items-center">
-        <div class="header-center-box d-flex flex-column align-items-center w-100">
-          <div class="d-flex flex-column flex-md-row align-items-center justify-content-center w-100 gap-3">
-            <!-- 로고 -->
-            <a class="logo fw-bold mb-2 mb-md-0" style="text-decoration: none; font-size:2rem; letter-spacing:1px; color:#03C75A; min-width:140px;">
-              DEVELOPER
-            </a>
-            <!-- 검색창 -->
-            <form class="search flex-grow-1" style="max-width:550px; width:100%;">
-              <div 
-                class="d-flex align-items-center rounded-pill shadow-sm bg-white px-2"
-                style="height:48px; border:1.5px solid #e5e5e5; position:relative; width:100%;">
-                <input 
-                  type="text" 
-                  id="search-input"
-                  class="form-control border-0 bg-transparent shadow-none flex-grow-1"
-                  placeholder="검색"
-                  value="송예빈"
-                  style="font-size:1.08rem; color:#222; font-weight:500; background:transparent; padding:20px; height:44px; min-width:90px;">
-                <!-- 돋보기 아이콘 -->
-                <a id="search_icon" style="position:absolute; right:18px; color:#03C75A; z-index:2;">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                    <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
-                    <line x1="16.4142" y1="16.586" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                </a>
-              </div>
-            </form>
-          </div>
+    <header class="naver-header py-3" style="background:#fff; border-bottom:1.5px solid #e2e5e6;">
+      <div class="container">
+        <div class="d-flex align-items-center">
+          <!-- 로고 -->
+          <a class="logo fw-bold" style="text-decoration: none; font-size:2rem; letter-spacing:1px; color:#03C75A; min-width:140px;">
+            DEVELOPER
+          </a>
+          <!-- 검색창 -->
+          <form class="search flex-grow-1 ms-3">
+            <div 
+              class="d-flex align-items-center rounded-pill shadow-sm bg-white px-2"
+              style="height:48px; border:1.5px solid #e5e5e5; position:relative; max-width:550px; width:100%;">
+              <input 
+                type="text" 
+                id="search-input"
+                class="form-control border-0 bg-transparent shadow-none flex-grow-1"
+                placeholder="검색"
+                value="송예빈"
+                style="font-size:1.08rem; color:#222; font-weight:500; background:transparent; padding:20px; height:44px; min-width:90px;">
+              <!-- 돋보기 아이콘 -->
+              <a id="search_icon" style="position:absolute; right:18px; color:#03C75A; z-index:2;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                  <line x1="16.4142" y1="16.586" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </a>
+            </div>
+          </form>
         </div>
       </div>
     </header>
     <!-- 네비 탭 -->
-    <nav class="naver-tabs bg-white border-bottom position-relative w-100">
-      <div class="d-flex justify-content-center align-items-center w-100 position-relative" style="gap:0;">
-        <!-- 왼쪽 버튼 -->
-        <button class="scroll-btn left ms-0" onclick="scrollTabs(-150)">&lt;</button>
-        <div class="tab-mask flex-grow-1" style="margin-inline:0;">
-          <div class="tab-wrapper">
-            <ul class="nav nav-pills justify-content-center w-100" id="mainTabs" role="tablist">
-              <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#about">👨‍💻 자기소개</a></li>
-              <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#tech">🛠️ 기술 스택</a></li>
-              <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#solo_project">📕 개인 프로젝트</a></li>
-              <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#team_project">📚 팀 프로젝트</a></li>
-              <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#award">🏆 수상 내역</a></li>
-            </ul>
-          </div>
+    <nav class="naver-tabs bg-white border-bottom position-relative">
+      <div class="tab-mask d-flex align-items-center justify-content-center" style="position:relative;">
+        <button class="scroll-btn left" onclick="scrollTabs(-150)">&lt;</button>
+        <div class="tab-wrapper flex-grow-1">
+          <ul class="nav nav-pills" id="mainTabs" role="tablist">
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#about">👨‍💻 자기소개</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#tech">🛠️ 기술 스택</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#solo_project">📕 개인 프로젝트</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#team_project">📚 팀 프로젝트</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#award">🏆 수상 내역</a></li>
+          </ul>
         </div>
-        <!-- 오른쪽 버튼 -->
-        <button class="scroll-btn right me-0" onclick="scrollTabs(150)">&gt;</button>
+        <button class="scroll-btn right" onclick="scrollTabs(150)">&gt;</button>
       </div>
     </nav>
 
@@ -132,7 +127,7 @@
                             <span>GitHub</span>
                           </a>
                           <a href="https://play.google.com/store/apps/dev?id=7544782687645797857" class="social-btn playstore" target="_blank" title="구글플레이">
-                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.89 2.54c-.36.2-.6.57-.6.98v16.97c0 .41.23.78.6.98.36.2.8.18 1.14-.05l7.6-5.13-8.74-12.1c-.34-.47-.98-.6-1.44-.35zm9.13 11.6l2.98 2.01-2.98 2.01v-4.02zm7.08-2.97l-3.13-2.11-3.41 2.3 3.41 2.3 3.13-2.11c.36-.24.36-.77 0-1.01zm-3.13 6.09l3.13-2.11c.36-.24.36-.77 0-1.01l-3.13-2.11-3.41 2.3 3.41 2.3zm-4.08-2.7l-7.6 5.13c-.34.23-.78.25-1.14.05-.36-.2-.6-.57-.6-.98V3.52c0-.41.23-.78.6-.98.36-.2.8-.18 1.14.05l7.6 5.13v4.02z"></path></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:middle;"><path d="M3.89 2.54c-.36.2-.6.57-.6.98v16.97c0 .41.23.78.6.98.36.2.8.18 1.14-.05l7.6-5.13-8.74-12.1c-.34-.47-.98-.6-1.44-.35zm9.13 11.6l2.98 2.01-2.98 2.01v-4.02zm7.08-2.97l-3.13-2.11-3.41 2.3 3.41 2.3 3.13-2.11c.36-.24.36-.77 0-1.01zm-3.13 6.09l3.13-2.11c.36-.24.36-.77 0-1.01l-3.13-2.11-3.41 2.3 3.41 2.3zm-4.08-2.7l-7.6 5.13c-.34.23-.78.25-1.14.05-.36-.2-.6-.57-.6-.98V3.52c0-.41.23-.78.6-.98.36-.2.8-.18 1.14.05l7.6 5.13v4.02z"></path></svg>
                             <span>Google Play</span>
                           </a>
                         </div>
@@ -140,7 +135,7 @@
                      </tr>
                   </tbody>
                 </table>
-                <img class="rounded-4 shadow" src="img/yebin.png" height="120" alt="송예빈" style="filter: blur(3px);" />
+                <img class="rounded-4 shadow" src="img/yebin.png" height="120" alt="송예빈" style="filter: blur(3px);"/>
               </div>            
               <!-- 자기소개 내용 -->
               <h5>소개</h5>
@@ -163,45 +158,45 @@
           <div class="row">
             <div class="col-md-6">
               <h5>💻 프로그래밍 언어</h5>
-              <ul class="list-group mb-3">
-                <li class="list-group-item">C#</li>
-                <li class="list-group-item">Java</li>
-                <li class="list-group-item">JavaScript</li>
-                <li class="list-group-item">Python</li>
+              <ul class="tech-list">
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#">C#</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">Java</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">JavaScript</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">Python</li>
               </ul>
               <h5>⚙️ 프레임워크 & 라이브러리</h5>
-              <ul class="list-group mb-3">
-                <li class="list-group-item">Unity 3D</li>
-                <li class="list-group-item">Android SDK</li>
-                <li class="list-group-item">Firebase</li>
-                <li class="list-group-item">TensorFlow (딥러닝 모델 학습)</li>
+              <ul class="tech-list">
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="Unity 3D">Unity 3D</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android SDK">Android SDK</li>
+                <li><img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase">Firebase</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow">TensorFlow</li>
               </ul>
               <h5>🔌 API</h5>
-              <ul class="list-group mb-3">
-                <li class="list-group-item">Kakao REST API (로그인, 회원가입)</li>
-                <li class="list-group-item">Kakao Maps API (위치 기반 서비스)</li>
+              <ul class="tech-list">
+                <li><img src="https://cdn-icons-png.flaticon.com/512/3669/3669952.png" alt="Kakao REST API" style="background:#fff;">Kakao REST API</li>
+                <li><img src="https://cdn-icons-png.flaticon.com/512/3669/3669952.png" alt="Kakao Maps API" style="background:#fff;">Kakao Maps API</li>
               </ul>
             </div>
             <div class="col-md-6">
               <h5>🗃️ 데이터베이스</h5>
-              <ul class="list-group mb-3">
-                <li class="list-group-item">Firebase Realtime Database</li>
-                <li class="list-group-item">SQLite</li>
+              <ul class="tech-list">
+                <li><img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase DB">Firebase Realtime DB</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite">SQLite</li>
               </ul>
               <h5>🛠️ 도구 및 플랫폼</h5>
-              <ul class="list-group mb-3">
-                <li class="list-group-item">Android Studio</li>
-                <li class="list-group-item">Visual Studio Code</li>
-                <li class="list-group-item">Git (버전 관리)</li>
-                <li class="list-group-item">Unity Editor</li>
-                <li class="list-group-item">Google Colab (딥러닝 모델 학습 및 테스트)</li>
+              <ul class="tech-list">
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" alt="Android Studio">Android Studio</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">VS Code</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">Git</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="Unity Editor">Unity Editor</li>
+                <li><img src="https://colab.research.google.com/img/colab_favicon_256px.png" alt="Google Colab" style="background:#fff;">Google Colab</li>
               </ul>
               <h5>⚡ 기술 및 서비스</h5>
-              <ul class="list-group mb-3">
-                <li class="list-group-item">WebGL (웹 게임 배포)</li>
-                <li class="list-group-item">RESTful API (서버 통신)</li>
-                <li class="list-group-item">AI (딥러닝 모델, 이미지 모자이크 처리)</li>
-                <li class="list-group-item">🌍 다국어 지원 (게임/앱 내 다국어)</li>
+              <ul class="tech-list">
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webstorm/webstorm-original.svg" alt="WebGL">WebGL</li>
+                <li><img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" alt="RESTful API">RESTful API</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="AI">AI</li>
+                <li><img src="https://cdn-icons-png.flaticon.com/512/484/484167.png" alt="다국어">다국어 지원</li>
               </ul>
             </div>
           </div>
