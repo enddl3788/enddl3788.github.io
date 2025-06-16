@@ -363,7 +363,6 @@
                   <img class="moblie_img" src="img\project\milibenefit\milibenefit_5.png" alt="혜택병사 5">
                   <img class="moblie_img" src="img\project\milibenefit\milibenefit_6.png" alt="혜택병사 6">
                   <img class="moblie_img" src="img\project\milibenefit\milibenefit_7.png" alt="혜택병사 7">
-                  <img class="moblie_img" src="img\project\milibenefit\milibenefit_8.png" alt="혜택병사 8">
                 </div>
 
                 <div aria-hidden="true" class="marquee__group">
@@ -374,7 +373,6 @@
                   <img class="moblie_img" src="img\project\milibenefit\milibenefit_5.png" alt="혜택병사 5">
                   <img class="moblie_img" src="img\project\milibenefit\milibenefit_6.png" alt="혜택병사 6">
                   <img class="moblie_img" src="img\project\milibenefit\milibenefit_7.png" alt="혜택병사 7">
-                  <img class="moblie_img" src="img\project\milibenefit\milibenefit_8.png" alt="혜택병사 8">
                 </div>
               </div>
             </article>
@@ -438,7 +436,9 @@
               <li>🚀 <b>데이터 기반 서비스 설계 및 구현</b> 역량 향상</li>
             </ul>
             <hr>
-            <a href="https://play.google.com/store/apps/details?id=com.yebin.militarybenefits" class="btn btn-success btn-sm ms-2" target="_blank">Google Play 다운로드</a>
+            <div>
+              <a href="https://play.google.com/store/apps/details?id=com.yebin.militarybenefits" class="btn btn-success btn-sm ms-2" target="_blank">Google Play 다운로드</a>
+            </div>
             <hr>
             <div class="fst-italic small text-end">작성자 : 송예빈</div>
           </div>
@@ -728,7 +728,56 @@
         </section>
       </div>
     </main>
-
+  <!-- PingPong Game Easter Egg -->
+  <div id="pong-easter-egg" style="width:100vw;max-width:100%;margin:0 auto;padding:0;display:none;background:rgba(255,255,255,0.98);border-top:1.5px solid #e2e5e6;box-shadow:0 -2px 12px rgba(0,0,0,0.07);">
+    <div style="max-width:480px;margin:0 auto;padding:16px 0;display:flex;flex-direction:column;align-items:center;">
+      <canvas id="pong-canvas" width="400" height="100" style="background:#f7f7f7;border-radius:8px;"></canvas>
+      <div style="margin-top:8px;font-size:0.95em;color:#888;">마우스(터치)로 패들을 움직이세요! <span id="pong-score"></span></div>
+      <button id="pong-close" style="margin-top:8px;" class="btn btn-sm btn-outline-secondary">닫기</button>
+      <button id="pong-restart" style="margin-top:8px;" class="btn btn-sm btn-success ms-2">다시하기</button>
+    </div>
+  </div>
+  <script src="js/pingpong-game.js"></script>
+  <script>
+  // 이스터에그 트리거: 5초간 페이지 최하단에 머무르면 안내 후 실행
+  let pongTimeout, pongNoticeTimeout;
+  function showPongNotice() {
+    if (document.getElementById('pong-easter-egg').style.display === 'block') return;
+    const notice = document.createElement('div');
+    notice.innerText = '🎉 이스터에그 발견!\n미니 핑퐁게임이 곧 시작됩니다.';
+    notice.style = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:12px 24px;border-radius:24px;z-index:10000;font-size:1.1em;box-shadow:0 2px 12px rgba(0,0,0,0.13);';
+    document.body.appendChild(notice);
+    pongNoticeTimeout = setTimeout(() => { notice.remove(); showPongGame(); }, 2000);
+  }
+  function showPongGame() {
+    document.getElementById('pong-easter-egg').style.display = 'block';
+    setTimeout(() => {
+      document.getElementById('pong-easter-egg').scrollIntoView({behavior:'smooth', block:'center'});
+    }, 100);
+    if(window.pongGameInit) window.pongGameInit();
+  }
+  window.addEventListener('scroll', function() {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2) {
+      if (!pongTimeout) {
+        pongTimeout = setTimeout(showPongNotice, 2000);
+      }
+    } else {
+      clearTimeout(pongTimeout);
+      clearTimeout(pongNoticeTimeout);
+      pongTimeout = null;
+    }
+  });
+  document.getElementById('pong-close').onclick = function() {
+    document.getElementById('pong-easter-egg').style.display = 'none';
+    if(window.pongGameStop) window.pongGameStop();
+  };
+  document.getElementById('pong-restart').onclick = function() {
+    if(window.pongGameStop) window.pongGameStop();
+    if(window.pongGameInit) window.pongGameInit();
+  };
+  </script>
+  <!-- ...existing code... -->
+  </body>
     <footer class="text-center text-muted py-4 border-top mt-4" style="font-size:0.95em">
       © 2026 송예빈. All rights reserved.
     </footer>
@@ -740,6 +789,4 @@
     <script src="js/blogDetail.js"></script>
     <script src="js/searchControl.js"></script>
     <script src="js/main.js"></script>
-
-  </body>
 </html>
