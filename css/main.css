@@ -42,7 +42,6 @@
 
 .naver-tabs .nav-link {
   border-radius: 20px;
-  background: #f7f7f9;
   color:#222225;
 }
 
@@ -99,7 +98,7 @@
 }
 
 .content-section {
-  padding: 3%;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,6 +109,7 @@
 
 .blog-detail{
   display:none;
+  width: auto;
 }
 
 /* 자기소개(about) 반응형 개선 */
