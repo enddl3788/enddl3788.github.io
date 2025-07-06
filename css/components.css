@@ -1,7 +1,11 @@
 .scroll-btn {
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  background-color: white;
+  border: 1px solid #ccc;
   border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
   font-size: 18px;
   width: 36px;
   height: 36px;
@@ -11,7 +15,6 @@
   z-index: 10;
   cursor: pointer;
   transition: box-shadow 0.2s ease;
-  background-color: rgba(255,255,255,0.5);
 }
 
 .scroll-btn:hover {
@@ -51,11 +54,13 @@
 
 .blog-preview {
   cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .blog-preview:hover {
   transform: scale(1.02);
   transition: transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -66,18 +71,8 @@
   cursor: pointer;
 }
 
-.btn {
-  background-color: rgba(255,255,255,0.7) !important;
-}
-
 .btn:hover {
   transform: scale(1.02);
   transition: transform 0.2s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.card {
-  background-color: rgba(255,255,255,0.5);
-  border: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
