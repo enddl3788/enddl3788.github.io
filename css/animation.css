@@ -28,3 +28,11 @@
     transform: translateX(var(--scroll-end));
   }
 }
+
+@media (max-width: 600px) {
+  .marquee {
+    width: 90vw;
+    min-width: 0;
+    max-width: 90vw;
+  }
+}
