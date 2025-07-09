@@ -1,6 +1,5 @@
 function showAllSections() {
-  document.querySelectorAll('.tab-pane').forEach(el => {
-    el.classList.add('show', 'active');
+  document.querySelectorAll('.content-section').forEach(el => {
     el.style.display = '';
   });
   document.querySelectorAll('.nav-link').forEach(tab => tab.classList.remove('active'));
@@ -18,7 +17,6 @@ document.querySelectorAll('.nav-link').forEach(tab => {
 
     // 모든 섹션 숨기기
     document.querySelectorAll('.content-section').forEach(el => {
-      el.classList.remove('show', 'active');
       el.style.display = 'none';
     });
 
@@ -27,7 +25,6 @@ document.querySelectorAll('.nav-link').forEach(tab => {
     if (targetId && targetId.startsWith('#')) {
       const targetPane = document.querySelector(targetId);
       if (targetPane) {
-        targetPane.classList.add('show', 'active');
         targetPane.style.display = '';
       }
     }
