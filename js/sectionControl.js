@@ -16,8 +16,8 @@ document.querySelectorAll('.nav-link').forEach(tab => {
     document.querySelectorAll('.nav-link').forEach(t => t.classList.remove('active'));
     this.classList.add('active');
 
-    // 모든 섹션 숨기기 (liquidGlass-wrapper 영향 방지)
-    document.querySelectorAll('.tab-pane').forEach(el => {
+    // 모든 섹션 숨기기
+    document.querySelectorAll('.content-section').forEach(el => {
       el.classList.remove('show', 'active');
       el.style.display = 'none';
     });
