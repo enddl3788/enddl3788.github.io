@@ -401,7 +401,7 @@
       <div class="container">
         <div class="d-flex align-items-center">
           <!-- 로고 -->
-          <a class="logo fw-bold" style="text-decoration: none; font-size:2rem; letter-spacing:1px; color:#03C75A; min-width:140px;">
+          <a class="logo fw-bold" style="text-decoration: none; font-size:2rem; letter-spacing:1px; color:#5a2d81; min-width:140px;">
             DEVELOPER
           </a>
           <!-- 검색창 -->
@@ -417,7 +417,7 @@
                 value="송예빈"
                 style="font-size:1.08rem; color:#222; font-weight:500; background:transparent; padding:20px; height:44px; min-width:90px;">
               <!-- 돋보기 아이콘 -->
-              <a id="search_icon" style="position:absolute; right:18px; color:#03C75A; z-index:2;">
+              <a id="search_icon" style="position:absolute; right:18px; color:#5a2d81; z-index:2;">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                   <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
                   <line x1="16.4142" y1="16.586" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -431,7 +431,16 @@
     <!-- 네비 탭 -->
     <nav class="naver-tabs  position-relative">
       <div class="tab-mask d-flex align-items-center justify-content-center" style="position:relative;">
-        <button class="scroll-btn left" onclick="scrollTabs(-150)">&lt;</button>
+        <div class="liquidGlass-wrapper left" onclick="scrollTabs(-150)">
+          <div class="liquidGlass-effect"></div>
+          <div class="liquidGlass-tint"></div>
+          <div class="liquidGlass-shine"></div>
+          <div class="liquidGlass-text">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M16 6l-8 6 8 6V6z" fill="currentColor"/>
+            </svg>
+          </div>
+        </div>
         <div class="tab-wrapper flex-grow-1">
           <ul class="nav nav-pills" id="mainTabs" role="tablist">
             <li class="nav-item liquidGlass-wrapper">
@@ -476,7 +485,16 @@
             </li>
           </ul>
         </div>
-        <button class="scroll-btn right" onclick="scrollTabs(150)">&gt;</button>
+        <div class="liquidGlass-wrapper right" onclick="scrollTabs(150)">
+          <div class="liquidGlass-effect"></div>
+          <div class="liquidGlass-tint"></div>
+          <div class="liquidGlass-shine"></div>
+          <div class="liquidGlass-text">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M8 6l8 6-8 6V6z" fill="currentColor"/>
+            </svg>
+          </div>
+        </div>
       </div>
     </nav>
 
@@ -535,7 +553,7 @@
               <!-- 자기소개 내용 -->
               <h5>소개</h5>
               <div class="p-1">
-                안녕하세요, <b>소통과 협업</b>을 중요시하는 개발자 <span style="color:#03C75A;">송예빈</span>입니다.<br>
+                안녕하세요, <b>소통과 협업</b>을 중요시하는 개발자 <b><span style="color:#5a2d81;">송예빈</span></b>입니다.<br>
                 새로운 기술과 도구에 열정을 갖고, 문제 해결과 창의적인 아이디어로
                 현실적인 솔루션 제공을 목표로 합니다.<br>
                 <b>유연성과 책임감</b>으로 <b>최상의 결과물</b>을 위해 노력합니다.<br>

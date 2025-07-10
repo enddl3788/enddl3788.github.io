@@ -24,13 +24,14 @@
 .naver-tabs {
   display: flex;
   justify-content: center;
+  width: 100%; /* 전체화면에서 넓이 100%로 설정 */
 }
 
 .naver-tabs ul {
   display: flex;
   gap: 8px;
   padding: 5px;
-  margin-inline: 5%;
+  /* margin-inline: 5%; 삭제 또는 주석처리 */
   justify-content: center;
 }
 
@@ -56,19 +57,19 @@
   justify-content: center;
   position: relative;
 }
-.naver-tabs .scroll-btn.left {
-  position: static;
+.naver-tabs .liquidGlass-wrapper.left {
   margin-right: 6px;
   left: unset;
   top: unset;
   transform: none;
+  cursor: pointer;
 }
-.naver-tabs .scroll-btn.right {
-  position: static;
+.naver-tabs .liquidGlass-wrapper.right {
   margin-left: 6px;
   right: unset;
   top: unset;
   transform: none;
+  cursor: pointer;
 }
 .naver-tabs .tab-wrapper {
   flex-grow: 1;
@@ -86,6 +87,7 @@
 /* 탭 아이템이 잘리지 않도록 ul에 min-width 적용 */
 .naver-tabs ul.nav {
   min-width: max-content;
+  max-width: 100%;
 }
 
 .naver-searchbar input {
@@ -148,12 +150,19 @@
   .naver-tabs .tab-mask {
     gap: 2px;
   }
-  .naver-tabs .scroll-btn.left,
-  .naver-tabs .scroll-btn.right {
-    width: 30px;
-    height: 30px;
-    font-size: 15px;
+  .naver-tabs .liquidGlass-wrapper.left,
+  .naver-tabs .liquidGlass-wrapper.right {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    aspect-ratio: 1/1;
+    font-size: 18px;
     margin: 0 2px;
+    border-radius: 50%; /* 동그랗게 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 

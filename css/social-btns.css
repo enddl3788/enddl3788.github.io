@@ -27,10 +27,10 @@
   transform: translateY(-2px) scale(1.04);
 }
 .social-btn.playstore {
-  background: #34a853;
+  background: #4285F4;
 }
 .social-btn.playstore:hover {
-  background: #1e7d34;
+  background: #357ae8;
   transform: translateY(-2px) scale(1.04);
 }
 .social-btn svg {
