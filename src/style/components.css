@@ -52,6 +52,10 @@
   flex-wrap: nowrap;
 }
 
+.nav-item:hover {
+  scale: 1.02;
+}
+
 .blog-preview {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.5);
