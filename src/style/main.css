@@ -47,7 +47,7 @@
 }
 
 .naver-tabs .nav-link.active {
-  background: #5a2d81;
+  background: #03c75a;
 }
 
 /* 네비 탭 버튼 위치 개선 */
@@ -95,7 +95,7 @@
 }
 
 .naver-searchbar button {
-  background: #03C75A;
+  background: #03c75a;
   border: none;
 }
 
