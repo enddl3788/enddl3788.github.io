@@ -9,6 +9,21 @@ function showAllSections() {
 document.querySelector('.logo').addEventListener('click', showAllSections);
 document.querySelector('#search_icon').addEventListener('click', showAllSections);
 
+// 맨 위로 버튼 기능
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 200) {
+    scrollToTopBtn.style.display = 'flex';
+    scrollToTopBtn.style.opacity = '1';
+  } else {
+    scrollToTopBtn.style.opacity = '0';
+    setTimeout(() => { scrollToTopBtn.style.display = 'none'; }, 300);
+  }
+});
+scrollToTopBtn.addEventListener('click', function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
 document.querySelectorAll('.nav-link').forEach(tab => {
   tab.addEventListener('click', function(event) {
     event.preventDefault();
