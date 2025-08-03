@@ -13,11 +13,11 @@ document.querySelector('#search_icon').addEventListener('click', showAllSections
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 window.addEventListener('scroll', function() {
   if (window.scrollY > 200) {
-    scrollToTopBtn.style.display = 'flex';
-    scrollToTopBtn.style.opacity = '1';
+    setTimeout(() => { scrollToTopBtn.style.display = 'flex'; }, 200);
+    setTimeout(() => { scrollToTopBtn.style.opacity = '1'; }, 300);
   } else {
     scrollToTopBtn.style.opacity = '0';
-    setTimeout(() => { scrollToTopBtn.style.display = 'none'; }, 300);
+    setTimeout(() => { scrollToTopBtn.style.display = 'none'; }, 200);
   }
 });
 scrollToTopBtn.addEventListener('click', function() {

@@ -121,9 +121,18 @@
 }
 
 .blog-detail{
-  display:none;
+  display: none;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: height 0.4s ease, opacity 0.3s ease;
   width: auto;
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.blog-detail.active {
+  height: auto; /* 이건 transition에 직접 사용되지 않음 */
+  opacity: 1;
 }
 
 /* 자기소개(about) 반응형 개선 */

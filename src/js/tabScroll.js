@@ -1,6 +1,6 @@
 const wrapper = document.querySelector('.tab-wrapper');
-const leftBtn = document.querySelector('.liquidGlass-wrapper.left');
-const rightBtn = document.querySelector('.liquidGlass-wrapper.right');
+const leftBtn = document.querySelector('.left');
+const rightBtn = document.querySelector('.right');
 
 function scrollTabs(amount) {
   wrapper.scrollBy({ left: amount, behavior: 'smooth' });
