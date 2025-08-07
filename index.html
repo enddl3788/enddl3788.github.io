@@ -221,7 +221,7 @@
             <div class="col-md-4">
               <div class="card h-100 blog-preview" onclick="showBlogDetail('militalk')">
                 <div class="card-body">
-                  <span class="badge bg-success mb-1">#개인 #AI #국방부 #경진대회</span>
+                  <span class="badge bg-success mb-1">#AI #국방부 #경진대회</span>
                   <div class="text-muted mb-1" style="font-size:0.9em;">2024.02 ~</div>
                   <h5 class="card-title"> <img src="public/project/militalk/militalk_logo.png" alt="밀리톡 로고" class="project-logo">  밀리톡</span></h5>
                   <p class="card-text">군인과 가족/예비역에게 국방 실시간 정보와 챗봇 서비스를 제공</p>
@@ -231,7 +231,7 @@
             <div class="col-md-4">
               <div class="card h-100 blog-preview" onclick="showBlogDetail('benefits')">
                 <div class="card-body">
-                  <span class="badge bg-info mb-1">#개인 #앱 #국방부 #경진대회</span>
+                  <span class="badge bg-info mb-1">#앱 #국방부 #경진대회</span>
                   <div class="text-muted mb-1" style="font-size:0.9em;">2024.06.01 ~ 2024.06.10</div>
                   <h5 class="card-title"><img src="https://play-lh.googleusercontent.com/IVXOw7DZfSPWetNiz8ZAsczZtgdevBz4cYb60n4E9iQozBQ1m5V50fpMZ6TXZWwOZNmp=s256-rw" alt="혜택병사 로고" class="project-logo"> 혜택병사</h5>
                   <p class="card-text">군생활 시간·비용 절약 실용 App (국방부 공공데이터 활용)</p>
@@ -242,10 +242,22 @@
               <div class="card h-100 blog-preview" onclick="showBlogDetail('skumap')">
                 <div class="card-body">
                   
-                  <span class="badge bg-secondary mb-1">#개인 #앱 #대학교</span>
+                  <span class="badge bg-secondary mb-1">#앱 #대학교</span>
                   <div class="text-muted mb-1" style="font-size:0.9em;">2021.09 ~ 2024.01</div>
                   <h5 class="card-title"> <img src="public/project/skumap/skumap_logo.png" alt="SKU MAP 로고" class="project-logo"> SKU MAP</h5>
                   <p class="card-text">신입생·방문객이 쉽게 학교를 탐색할 수 있는 모바일 지도 서비스</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 blog-preview" onclick="showBlogDetail('nk-briefing-ai')">
+                <div class="card-body">
+                  <span class="badge bg-danger mb-1">#AI #통일부 #공공데이터</span>
+                  <div class="text-muted mb-1" style="font-size:0.9em;">2025.07.07 ~ 2025.08.08</div>
+                  <h5 class="card-title">
+                      📰 NK Briefing AI
+                  </h5>
+                  <p class="card-text">통일부 공공데이터 기반, 일간 북한 동향 자동 요약 블로그 서비스</p>
                 </div>
               </div>
             </div>
@@ -544,6 +556,85 @@
               <a href="https://github.com/enddl3788/SKU_MAP" target="_blank" class="btn btn-outline-dark btn-sm ms-2">🐱 GitHub 코드</a>
             </div>
           </div>
+          <div id="blog-detail-nk-briefing-ai" class="blog-detail card card-body mb-3">
+            <h3>
+              📰 북한 브리핑 AI
+              <span class="text-danger ms-2" style="font-size:0.8em;">2025년 통일부 공공데이터 활용 공모전 출품작</span>
+            </h3>
+            <div class="mb-2 small">
+              <b>기간</b>: 2025.07.07 ~ 2025.08.08<br>
+              <b>카테고리</b>: 백엔드, AI, 자동화, 블로그, 공공데이터, FastAPI<br>
+              <b>수상</b>: 2025년 통일부 공공데이터 활용 공모전 출품
+            </div>
+            <hr>
+            <img src="public/project/dailyNK/preview.PNG" alt="북한 브리핑 AI 타이틀" class="img-fluid" style="display: block;">
+            <hr>
+            <p class="mb-1">
+              <b>📌 프로젝트 개요</b><br>
+              <strong>북한 브리핑 AI</strong>는 통일부 공공데이터(OpenAPI)를 활용해 북한의 최신 동향을 자동으로 분석하고, <b>매일 블로그에 요약 뉴스를 게시하는 자동화 서비스</b>입니다.<br>
+              복잡한 북한 관련 정보를 누구나 이해할 수 있도록 간결하게 정리하며, 연구자, 정책 담당자, 일반 시민에게 <b>시의성 있는 정보</b>를 제공하는 것을 목표로 합니다.<br>
+              <b>2025년 통일부 공공데이터 활용 공모전</b> 출품작으로, 공공데이터의 가치를 증대시키기 위해 기획되었습니다.
+            </p>
+            <hr>
+            <b>✨ 주요 기능</b>
+            <ul>
+              <li>🤖 <b>통일부 OpenAPI 연동</b> : '북한 동향', '김정은 공개 활동', '통일부 보도자료' API 자동 수집</li>
+              <li>✍️ <b>AI 기반 일간 뉴스 요약</b> : GPT-4 모델을 활용하여 수집된 정보를 주제별로 요약 및 기사 작성</li>
+              <li>🖼️ <b>AI 이미지 자동 생성</b> : DALL-E 3를 활용해 기사 내용에 맞는 이미지 자동 생성</li>
+              <li>🚀 <b>블로그 자동 업로드</b> : Tistory API를 연동하여 요약된 콘텐츠와 이미지를 매일 자동으로 발행</li>
+            </ul>
+            <hr>
+            <b>📊 프로젝트 성과 및 이점</b>
+            <ul>
+              <li>✔️ 복잡한 북한 동향 정보에 대한 <b>국민 정보 접근성 향상</b></li>
+              <li>✔️ 공공데이터를 활용한 <b>민간 서비스의 새로운 가치 창출</b></li>
+              <li>✔️ 수동 작업 없이 매일 최신 정보를 제공하는 <b>자동화된 시의성 확보</b></li>
+              <li>✔️ 연구자 및 정책 입안자를 위한 <b>효율적인 정보 요약 지원</b></li>
+            </ul>
+            <hr>
+            <b>🛠️ 개발 환경</b>
+            <ul>
+              <li>Python, FastAPI</li>
+              <li>OpenAI API (GPT-4, DALL-E 3)</li>
+              <li>Tistory API</li>
+              <li>APScheduler (자동화 스케줄링)</li>
+              <li>데이터 소스: 통일부 공공데이터 API</li>
+            </ul>
+            <hr>
+            <b>🕒 개발 방식/역할</b>
+            <ul>
+              <li>개발 기간: 2025.07.07 ~ 2025.08.08</li>
+              <li>개발 방식: 1인 개인 프로젝트</li>
+              <li>
+                <b>주요 담당</b>
+                <ul>
+                  <li>아이디어 기획 및 서비스 구조 설계</li>
+                  <li>통일부 공공데이터 및 OpenAI API 연동</li>
+                  <li>백엔드 서버(FastAPI) 및 자동화 스케줄러 개발</li>
+                  <li>블로그 자동 포스팅 기능 개발</li>
+                </ul>
+              </li>
+            </ul>
+            <hr>
+            <b>🏅 출품 정보</b>
+            <ul>
+              <li>출품 대회: 2025년 통일부 공공데이터 활용 공모전</li>
+              <li>대회 주관: 통일부</li>
+              <li>결과: 최종 출품</li>
+            </ul>
+            <hr>
+            <b>📘 경험 및 성장</b>
+            <ul>
+              <li>💡 <b>AI 기술과 공공데이터를 결합</b>한 새로운 서비스 기획 및 구현 경험</li>
+              <li>🛠️ <b>FastAPI, APSecheduler</b> 등 최신 백엔드 기술 스택 숙련</li>
+              <li>🚀 <b>전체 서비스의 자동화 및 워크플로우</b> 설계 역량 강화</li>
+            </ul>
+            <hr>
+            <div>
+              <a href="https://enddl3788.tistory.com/" target="_blank" class="btn btn-danger btn-sm ms-2">블로그 이동하기</a>
+              <a href="https://github.com/enddl3788/Daily-NK-Briefing-AI" class="btn btn-primary btn-sm ms-2" target="_blank">🐱 GitHub 코드</a>
+            </div>
+        </div>
         </section>
 
         <!-- 📚 팀 프로젝트 : 군밤 -->
@@ -553,7 +644,7 @@
           <div class="col-md-4">
             <div class="card h-100 blog-preview" onclick="showBlogDetail('gunbam')">
               <div class="card-body">
-                <span class="badge bg-primary mb-1">#팀 #딥러닝 #앱 #졸업작품</span>
+                <span class="badge bg-primary mb-1">#딥러닝 #앱 #졸업작품</span>
                 <div class="text-muted mb-1" style="font-size:0.9em;">2022.09 ~ 2023.11</div>
                 <h5 class="card-title"><img src="public/project/gunbam/gunbam_logo.png" alt="군밤 로고" class="project-logo"> 군밤</h5>
                 <p class="card-text">군대 내 보안과 익명성을 고려한 이미지 모자이크 커뮤니티 앱</p>
@@ -563,7 +654,7 @@
           <div class="col-md-4">
             <div class="card h-100 blog-preview" onclick="showBlogDetail('untitledmaze')">
               <div class="card-body">
-                <span class="badge bg-secondary mb-1">#팀 #Unity3D #C# #WebGL</span>
+                <span class="badge bg-secondary mb-1">#Unity3D #C# #WebGL</span>
                 <div class="text-muted mb-1" style="font-size:0.9em;">2024.01.23 ~ 2024.02.08</div>
                 <h5 class="card-title">🎮 Untitled Maze Game</h5>
                 <p class="card-text">Unity 기반 1인칭 3D 미로 탈출 Web 게임</p>
