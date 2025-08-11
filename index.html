@@ -221,7 +221,7 @@
             <div class="col-md-4">
               <div class="card h-100 blog-preview" onclick="showBlogDetail('militalk')">
                 <div class="card-body">
-                  <span class="badge bg-success mb-1">#AI #국방부 #경진대회</span>
+                  <span class="badge bg-success mb-1">#AI #국방부</span>
                   <div class="text-muted mb-1" style="font-size:0.9em;">2024.02 ~</div>
                   <h5 class="card-title"> <img src="public/project/militalk/militalk_logo.png" alt="밀리톡 로고" class="project-logo">  밀리톡</span></h5>
                   <p class="card-text">군인과 가족/예비역에게 국방 실시간 정보와 챗봇 서비스를 제공</p>
@@ -266,9 +266,8 @@
           <div id="blog-detail-militalk" class="blog-detail card card-body mb-3">
             <h3><img src="public/project/militalk/militalk_logo.png" alt="밀리톡 로고" class="project-logo"> 밀리톡 <span class="text-success ms-2" style="font-size:0.8em;">2025 공공데이터 활용 경진대회 출품작</span></h3>
             <div class="mb-2 small">
-              <b>기간</b>: 2024.02 ~ 진행 중<br>
+              <b>기간</b>: 2024.02 ~ 2025.05<br>
               <b>카테고리</b>: AI, 챗봇, 국방부, 공공데이터, KakaoTalk API <br>
-              <b>수상</b>: 2025 국방부 경진대회 출품
             </div>
             <hr>
             <article class="wrapper">
@@ -349,13 +348,6 @@
               <li>💡 외부 API 통합과 서버 설계 전 과정 경험</li>
               <li>📲 챗봇 UX 개선과 위기 응답 설계 노하우 습득</li>
               <li>🚀 군 도메인 데이터에 대한 실용적 접근 및 사용자 맞춤 응답 구현</li>
-            </ul>
-            <hr>
-            <b>🏅 출품 정보</b>
-            <ul>
-              <li>출품 대회: 2025년 국방 공공데이터 활용 경진대회</li>
-              <li>주관: 국방부</li>
-              <li>결과: 최종 출품 완료</li>
             </ul>
             <hr>
             <div>
@@ -558,81 +550,55 @@
           </div>
           <div id="blog-detail-nk-briefing-ai" class="blog-detail card card-body mb-3">
             <h3>
-              📰 북한 브리핑 AI
-              <span class="text-danger ms-2" style="font-size:0.8em;">2025년 통일부 공공데이터 활용 공모전 출품작</span>
+                📰 북한 브리핑 AI
             </h3>
-            <div class="mb-2 small">
-              <b>기간</b>: 2025.08.04 ~ 2025.08.08<br>
-              <b>카테고리</b>: 백엔드, AI, 자동화, 블로그, 공공데이터, FastAPI<br>
-              <b>수상</b>: 2025년 통일부 공공데이터 활용 공모전 출품
+            <h5 class="text-danger">
+                <span class="badge bg-danger">2025년 통일부 공공데이터 활용 공모전 출품작</span>
+            </h5>
+            <div class="mb-2 small text-muted">
+                <b>기간</b>: 2025.08.04 ~ 2025.08.11<br>
+                <b>카테고리</b>: 백엔드, AI, 자동화, 블로그, 공공데이터, FastAPI<br>
+                <b>수상</b>: 2025년 통일부 공공데이터 활용 공모전 출품
             </div>
             <hr>
-            <img src="public/project/dailyNK/preview.PNG" alt="북한 브리핑 AI 타이틀" class="img-fluid" style="display: block;">
+            <img src="public/project/dailyNK/preview.PNG" alt="북한 브리핑 AI 미리보기" class="img-fluid" style="display: block;">
             <hr>
             <p class="mb-1">
-              <b>📌 프로젝트 개요</b><br>
-              <strong>북한 브리핑 AI</strong>는 통일부 공공데이터(OpenAPI)를 활용해 북한의 최신 동향을 자동으로 분석하고, <b>매일 블로그에 요약 뉴스를 게시하는 자동화 서비스</b>입니다.<br>
-              복잡한 북한 관련 정보를 누구나 이해할 수 있도록 간결하게 정리하며, 연구자, 정책 담당자, 일반 시민에게 <b>시의성 있는 정보</b>를 제공하는 것을 목표로 합니다.<br>
-              <b>2025년 통일부 공공데이터 활용 공모전</b> 출품작으로, 공공데이터의 가치를 증대시키기 위해 기획되었습니다.
+                <b>📌 프로젝트 개요</b><br>
+                <strong>북한 브리핑 AI</strong>는 통일부 공공데이터 API를 활용해 북한의 최신 동향 데이터를 자동으로 수집하고, OpenAI API(GPT-4o-mini)로 요약 및 가공하여 **12가지 관점과 12가지 언어**의 기사를 생성하는 자동화 서비스입니다.<br>
+                생성된 기사는 **APScheduler를 이용해 매주 일요일 특정 시간에 맞춰 티스토리 블로그에 자동으로 게시**됩니다.<br>
+                이 프로젝트는 복잡한 북한 정보를 누구나 이해하기 쉽게 제공하여 국민 정보 접근성을 향상시키고, 공공데이터의 새로운 가치를 창출하는 것을 목표로 합니다.
             </p>
             <hr>
             <b>✨ 주요 기능</b>
             <ul>
-              <li>🤖 <b>통일부 OpenAPI 연동</b> : '북한 동향', '김정은 공개 활동', '통일부 보도자료' API 자동 수집</li>
-              <li>✍️ <b>AI 기반 일간 뉴스 요약</b> : GPT-4 모델을 활용하여 수집된 정보를 주제별로 요약 및 기사 작성</li>
-              <li>🖼️ <b>AI 이미지 자동 생성</b> : DALL-E 3를 활용해 기사 내용에 맞는 이미지 자동 생성</li>
-              <li>🚀 <b>블로그 자동 업로드</b> : Tistory API를 연동하여 요약된 콘텐츠와 이미지를 매일 자동으로 발행</li>
+                <li>🤖 <b>다양한 데이터 수집</b> : 통일부 공공데이터('북한 동향', '김정은 공개 활동' 등) API에서 최신 데이터를 자동으로 수집합니다.</li>
+                <li>✍️ <b>AI 기반 주간 뉴스 요약</b> : GPT-4o-mini 모델을 활용하여 12가지 관점 및 언어로 기사를 생성합니다.</li>
+                <li>🖼️ <b>AI 이미지 자동 생성</b> : DALL-E 3를 활용해 뉴스에 적합한 이미지를 생성합니다. (※ <b>비용 문제로 현재는 일시 중지</b>)</li>
+                <li>🚀 <b>티스토리 자동 업로드</b> : 생성된 콘텐츠를 티스토리 API를 연동하여 특정 시간에 자동으로 발행합니다.</li>
+                <li>📅 <b>주간 스케줄링</b> : APScheduler를 이용해 매주 일요일, 정해진 시간에 맞춰 각기 다른 관점의 기사를 순차적으로 자동 게시합니다.</li>
             </ul>
             <hr>
-            <b>📊 프로젝트 성과 및 이점</b>
+            <b>🛠️ 기술 스택</b>
             <ul>
-              <li>✔️ 복잡한 북한 동향 정보에 대한 <b>국민 정보 접근성 향상</b></li>
-              <li>✔️ 공공데이터를 활용한 <b>민간 서비스의 새로운 가치 창출</b></li>
-              <li>✔️ 수동 작업 없이 매일 최신 정보를 제공하는 <b>자동화된 시의성 확보</b></li>
-              <li>✔️ 연구자 및 정책 입안자를 위한 <b>효율적인 정보 요약 지원</b></li>
-            </ul>
-            <hr>
-            <b>🛠️ 개발 환경</b>
-            <ul>
-              <li>Python, FastAPI</li>
-              <li>OpenAI API (GPT-4, DALL-E 3)</li>
-              <li>Tistory API</li>
-              <li>APScheduler (자동화 스케줄링)</li>
-              <li>데이터 소스: 통일부 공공데이터 API</li>
-            </ul>
-            <hr>
-            <b>🕒 개발 방식/역할</b>
-            <ul>
-              <li>개발 기간: 2025.07.07 ~ 2025.08.08</li>
-              <li>개발 방식: 1인 개인 프로젝트</li>
-              <li>
-                <b>주요 담당</b>
-                <ul>
-                  <li>아이디어 기획 및 서비스 구조 설계</li>
-                  <li>통일부 공공데이터 및 OpenAI API 연동</li>
-                  <li>백엔드 서버(FastAPI) 및 자동화 스케줄러 개발</li>
-                  <li>블로그 자동 포스팅 기능 개발</li>
-                </ul>
-              </li>
+                <li><b>백엔드</b>: Python, FastAPI</li>
+                <li><b>AI 모델</b>: OpenAI API (GPT-4o-mini, DALL-E 3)</li>
+                <li><b>데이터 수집</b>: `requests` 라이브러리</li>
+                <li><b>자동화</b>: `APScheduler`</li>
+                <li><b>웹 프레임워크</b>: Jinja2 Templates</li>
+                <li><b>배포</b>: 구름IDE</li>
             </ul>
             <hr>
             <b>🏅 출품 정보</b>
             <ul>
-              <li>출품 대회: 2025년 통일부 공공데이터 활용 공모전</li>
-              <li>대회 주관: 통일부</li>
-              <li>결과: 최종 출품</li>
-            </ul>
-            <hr>
-            <b>📘 경험 및 성장</b>
-            <ul>
-              <li>💡 <b>AI 기술과 공공데이터를 결합</b>한 새로운 서비스 기획 및 구현 경험</li>
-              <li>🛠️ <b>FastAPI, APSecheduler</b> 등 최신 백엔드 기술 스택 숙련</li>
-              <li>🚀 <b>전체 서비스의 자동화 및 워크플로우</b> 설계 역량 강화</li>
+                <li><b>출품 대회</b>: 2025년 통일부 공공데이터 활용 공모전</li>
+                <li><b>대회 주관</b>: 통일부</li>
+                <li><b>결과</b>: 최종 출품</li>
             </ul>
             <hr>
             <div>
-              <a href="https://enddl3788.tistory.com/" target="_blank" class="btn btn-danger btn-sm ms-2">블로그 이동하기</a>
-              <a href="https://github.com/enddl3788/Daily-NK-Briefing-AI" class="btn btn-primary btn-sm ms-2" target="_blank">🐱 GitHub 코드</a>
+                <a href="https://enddl3788.tistory.com/" target="_blank" class="btn btn-danger btn-sm">블로그 이동하기</a>
+                <a href="https://github.com/enddl3788/Daily-NK-Briefing-AI" target="_blank" class="btn btn-primary btn-sm ms-2">🐱 GitHub 코드</a>
             </div>
         </div>
         </section>
